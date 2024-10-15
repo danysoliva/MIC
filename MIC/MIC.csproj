@@ -1,0 +1,601 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1F82A080-9C52-40A3-AFDC-F58D6F4998D0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>MIC</RootNamespace>
+    <AssemblyName>MIC</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>\\aqfsvr010\deploy%24\MIC\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Unc</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <InstallUrl>\\aqfsvr010\deploy%24\MIC\</InstallUrl>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>26</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>MIC.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>iconoMIC.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>9C83AD50D2F756B6E7B2C7C702F769D691D5FB02</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>true</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AssemblyOriginatorKeyFile>ever.erazo_key.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Drawing.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Images.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Pdf.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.RichEdit.v23.2.Export, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Sparkline.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v23.2.UI, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraNavBar.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v23.2.Extensions, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraRichEdit.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v23.2.Core.Desktop, Version=23.2.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Clases\Atributos.cs" />
+    <Compile Include="Clases\CajaDialogo.cs" />
+    <Compile Include="Clases\DataOperations.cs" />
+    <Compile Include="Clases\Diagnosticos.cs" />
+    <Compile Include="Clases\Global.cs" />
+    <Compile Include="Clases\GrupoUser.cs" />
+    <Compile Include="Clases\Items.cs" />
+    <Compile Include="Clases\Security.cs" />
+    <Compile Include="Clases\tables_id.cs" />
+    <Compile Include="Clases\TipoEquipo.cs" />
+    <Compile Include="Clases\Ubicaciones.cs" />
+    <Compile Include="Clases\UserLogin.cs" />
+    <Compile Include="Equipos\dsAtributos.cs">
+      <DependentUpon>dsAtributos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\dsAtributos.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsAtributos.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\dsItems.cs">
+      <DependentUpon>dsItems.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\dsItems.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsItems.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\findAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\findAtributos.Designer.cs">
+      <DependentUpon>findAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmAddAtributo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmAddAtributo.Designer.cs">
+      <DependentUpon>frmAddAtributo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmAddUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmAddUbicacion.Designer.cs">
+      <DependentUpon>frmAddUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmAdjuntarArchivos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmAdjuntarArchivos.Designer.cs">
+      <DependentUpon>frmAdjuntarArchivos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmAtributosEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmAtributosEquipos.Designer.cs">
+      <DependentUpon>frmAtributosEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmCRUDAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmCRUDAtributos.Designer.cs">
+      <DependentUpon>frmCRUDAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmCRUDAtributosequipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmCRUDAtributosequipos.Designer.cs">
+      <DependentUpon>frmCRUDAtributosequipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\FrmCRUDItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\FrmCRUDItems.Designer.cs">
+      <DependentUpon>FrmCRUDItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmDevolucionEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmDevolucionEquipo.Designer.cs">
+      <DependentUpon>frmDevolucionEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmDevolverEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmDevolverEquipo.Designer.cs">
+      <DependentUpon>frmDevolverEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmDiagnosticoEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmDiagnosticoEquipos.Designer.cs">
+      <DependentUpon>frmDiagnosticoEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmFindUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmFindUsers.Designer.cs">
+      <DependentUpon>frmFindUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmHOMEAtributos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmHOMEAtributos.Designer.cs">
+      <DependentUpon>frmHOMEAtributos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmHomeAtributos1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmHomeAtributos1.Designer.cs">
+      <DependentUpon>frmHomeAtributos1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmHomeDiagnosticos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmHomeDiagnosticos.Designer.cs">
+      <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmHomeItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmHomeItems.Designer.cs">
+      <DependentUpon>frmHomeItems.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmHomeItems1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmHomeItems1.Designer.cs">
+      <DependentUpon>frmHomeItems1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmHomeTipoEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmHomeTipoEquipo.Designer.cs">
+      <DependentUpon>frmHomeTipoEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmSelectUbicacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmSelectUbicacion.Designer.cs">
+      <DependentUpon>frmSelectUbicacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmTipoEquipos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmTipoEquipos.Designer.cs">
+      <DependentUpon>frmTipoEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmUbicacionEquipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmUbicacionEquipo.Designer.cs">
+      <DependentUpon>frmUbicacionEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmUbicaciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmUbicaciones.Designer.cs">
+      <DependentUpon>frmUbicaciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmUbicacionesOP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmUbicacionesOP.Designer.cs">
+      <DependentUpon>frmUbicacionesOP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Equipos\frmUsers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmUsers.Designer.cs">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLogin.Designer.cs">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Message\frmOpcionMotivo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Message\frmOpcionMotivo.Designer.cs">
+      <DependentUpon>frmOpcionMotivo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MICDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MICDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reportes\dsReportes.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\mainReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\mainReportes.Designer.cs">
+      <DependentUpon>mainReportes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptDevolucionEquipo.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptDevolucionEquipo.Designer.cs">
+      <DependentUpon>rptDevolucionEquipo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptDiagnostico.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptDiagnostico.Designer.cs">
+      <DependentUpon>rptDiagnostico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptEntregaCelulares.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptEntregaCelulares.Designer.cs">
+      <DependentUpon>rptEntregaCelulares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\rptEntregaEquipos.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reportes\rptEntregaEquipos.Designer.cs">
+      <DependentUpon>rptEntregaEquipos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SplashForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SplashForm.Designer.cs">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Equipos\findAtributos.resx">
+      <DependentUpon>findAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmAddAtributo.resx">
+      <DependentUpon>frmAddAtributo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmAddUbicacion.resx">
+      <DependentUpon>frmAddUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmAdjuntarArchivos.resx">
+      <DependentUpon>frmAdjuntarArchivos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmCRUDAtributos.resx">
+      <DependentUpon>frmCRUDAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <AdditionalFiles Include="Equipos\frmCRUDAtributosequipos.resx">
+      <DependentUpon>frmCRUDAtributosequipos.cs</DependentUpon>
+    </AdditionalFiles>
+    <EmbeddedResource Include="Equipos\FrmCRUDItems.resx">
+      <DependentUpon>FrmCRUDItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmDevolucionEquipo.resx">
+      <DependentUpon>frmDevolucionEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmDevolverEquipo.resx">
+      <DependentUpon>frmDevolverEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmDiagnosticoEquipos.resx">
+      <DependentUpon>frmDiagnosticoEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmFindUsers.resx">
+      <DependentUpon>frmFindUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmHOMEAtributos.resx">
+      <DependentUpon>frmHOMEAtributos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmHomeAtributos1.resx">
+      <DependentUpon>frmHomeAtributos1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmHomeDiagnosticos.resx">
+      <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmHomeItems.resx">
+      <DependentUpon>frmHomeItems.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmHomeItems1.resx">
+      <DependentUpon>frmHomeItems1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmHomeTipoEquipo.resx">
+      <DependentUpon>frmHomeTipoEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmSelectUbicacion.resx">
+      <DependentUpon>frmSelectUbicacion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmTipoEquipos.resx">
+      <DependentUpon>frmTipoEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmUbicacionEquipo.resx">
+      <DependentUpon>frmUbicacionEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmUbicaciones.resx">
+      <DependentUpon>frmUbicaciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmUbicacionesOP.resx">
+      <DependentUpon>frmUbicacionesOP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmUsers.resx">
+      <DependentUpon>frmUsers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLogin.resx">
+      <DependentUpon>frmLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Message\frmOpcionMotivo.resx">
+      <DependentUpon>frmOpcionMotivo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Reportes\mainReportes.resx">
+      <DependentUpon>mainReportes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptDevolucionEquipo.resx">
+      <DependentUpon>rptDevolucionEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptDiagnostico.resx">
+      <DependentUpon>rptDiagnostico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptEntregaCelulares.resx">
+      <DependentUpon>rptEntregaCelulares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\rptEntregaEquipos.resx">
+      <DependentUpon>rptEntregaEquipos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashForm.resx">
+      <DependentUpon>SplashForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Equipos\dsAtributos.xsc">
+      <DependentUpon>dsAtributos.xsd</DependentUpon>
+    </None>
+    <None Include="Equipos\dsAtributos.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsAtributos.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Equipos\dsAtributos.xss">
+      <DependentUpon>dsAtributos.xsd</DependentUpon>
+    </None>
+    <None Include="Equipos\dsItems.xsc">
+      <DependentUpon>dsItems.xsd</DependentUpon>
+    </None>
+    <None Include="Equipos\dsItems.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsItems.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Equipos\dsItems.xss">
+      <DependentUpon>dsItems.xsd</DependentUpon>
+    </None>
+    <None Include="Equipos\Frm.CRUDAtributosEquipos">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Equipos\frm.Designer.CRUDEstadosEquipos" />
+    <None Include="ever.erazo_key.pfx" />
+    <None Include="Key_2024_publishing_Danys.pfx" />
+    <None Include="MICDataSet.xsc">
+      <DependentUpon>MICDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MICDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MICDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MICDataSet.xss">
+      <DependentUpon>MICDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MIC_1_TemporaryKey.pfx" />
+    <None Include="MIC_TemporaryKey.pfx" />
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Reportes\dsReportes.xsc">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Reportes\dsReportes.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsReportes.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Reportes\dsReportes.xss">
+      <DependentUpon>dsReportes.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\suministro-instalacion-equipos-informaticos-y-redes.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fondo2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="construction_engineering_protection_hold_hand_cog_technology_icon_153207.ico" />
+    <Content Include="iconoMIC.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
