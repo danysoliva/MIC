@@ -19,11 +19,19 @@ namespace MIC.Equipos
             Insert = 1,
             Update = 2
         }
-
+        string barcode;
         ComportamientoCRUD ComportamientoActual;
-
+        DataOperations dp = new DataOperations();
         public Atributo AtributoActual;
-
+        public void CargarOrderForce()
+        {
+            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            con.Open();
+            SqlCommand cmm = new SqlCommand("sp_load_order_force", con);
+            cmm.CommandType = CommandType.StoredProcedure;
+            barcode = cmm.ExecuteScalar().ToString();
+            con.Close();
+        }
         public frmCRUDAtributos()
         {
             InitializeComponent();
@@ -48,6 +56,7 @@ namespace MIC.Equipos
             switch (ComportamientoActual)
             {
                 case ComportamientoCRUD.Insert:
+                    CargarOrderForce();
                     break;
 
                 case ComportamientoCRUD.Update:
@@ -110,7 +119,7 @@ namespace MIC.Equipos
 
         private void cmdRegistrar_Atributo_Click(object sender, EventArgs e)
         {
-         
+            int orderforce;
             DataOperations dp = new DataOperations();
             if (string.IsNullOrEmpty(gleAtributos.Text))
             {
@@ -131,12 +140,12 @@ namespace MIC.Equipos
             switch (ComportamientoActual)
             {
                 case ComportamientoCRUD.Insert:
-
+                    orderforce = Convert.ToInt32(barcode) + 1;
                     AtributoActual.tipo_dato = dp.ValidateNumberInt32(gleAtributos.EditValue);
                     AtributoActual.descripcion = txtDescripcion.Text;
                     AtributoActual.enable = tggEnable.IsOn;
                     AtributoActual.imprimible = tggImprimible.IsOn;
-
+                    AtributoActual.order_force =    orderforce;
                     if (AtributoActual.InsertRowAtributos())
                     {
                         CajaDialogo.InformationAuto();

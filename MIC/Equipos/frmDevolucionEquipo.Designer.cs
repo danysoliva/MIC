@@ -256,6 +256,7 @@ namespace MIC.Equipos
             this.cmdCerrar.Size = new System.Drawing.Size(92, 36);
             this.cmdCerrar.TabIndex = 40;
             this.cmdCerrar.Text = "Cerrar";
+            this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // comboMotivo
             // 
@@ -287,7 +288,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.lblTituloVentana);
             this.Name = "frmDevolucionEquipo";
-            this.Text = "frmDevolucionEquipo";
+            this.Text = "Devolucion de Equipos";
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlItems)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).EndInit();

@@ -81,7 +81,7 @@
             this.tggVerTodos.Name = "tggVerTodos";
             this.tggVerTodos.Properties.OffText = "NO";
             this.tggVerTodos.Properties.OnText = "SI";
-            this.tggVerTodos.Size = new System.Drawing.Size(93, 24);
+            this.tggVerTodos.Size = new System.Drawing.Size(93, 18);
             this.tggVerTodos.TabIndex = 23;
             this.tggVerTodos.Toggled += new System.EventHandler(this.tggVerTodos_Toggled_1);
             // 
@@ -98,7 +98,7 @@
             this.repositoryItemCheckEdit1,
             this.repositoryItemCheckEdit2,
             this.repositoryItemFontEdit1});
-            this.gridControlHomeAtributos.Size = new System.Drawing.Size(763, 392);
+            this.gridControlHomeAtributos.Size = new System.Drawing.Size(763, 370);
             this.gridControlHomeAtributos.TabIndex = 22;
             this.gridControlHomeAtributos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -159,7 +159,7 @@
             this.colid.Name = "colid";
             this.colid.Visible = true;
             this.colid.VisibleIndex = 0;
-            this.colid.Width = 67;
+            this.colid.Width = 66;
             // 
             // colitems_code
             // 
@@ -167,7 +167,7 @@
             this.colitems_code.Name = "colitems_code";
             this.colitems_code.Visible = true;
             this.colitems_code.VisibleIndex = 1;
-            this.colitems_code.Width = 67;
+            this.colitems_code.Width = 66;
             // 
             // colnombre
             // 
@@ -176,7 +176,7 @@
             this.colnombre.Name = "colnombre";
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 2;
-            this.colnombre.Width = 67;
+            this.colnombre.Width = 66;
             // 
             // colid_tipo_equipo
             // 
@@ -185,7 +185,7 @@
             this.colid_tipo_equipo.Name = "colid_tipo_equipo";
             this.colid_tipo_equipo.Visible = true;
             this.colid_tipo_equipo.VisibleIndex = 3;
-            this.colid_tipo_equipo.Width = 66;
+            this.colid_tipo_equipo.Width = 65;
             // 
             // colenable
             // 
@@ -195,7 +195,7 @@
             this.colenable.Name = "colenable";
             this.colenable.Visible = true;
             this.colenable.VisibleIndex = 4;
-            this.colenable.Width = 66;
+            this.colenable.Width = 65;
             // 
             // repositoryItemCheckEdit2
             // 
@@ -209,7 +209,7 @@
             this.colmarca.Name = "colmarca";
             this.colmarca.Visible = true;
             this.colmarca.VisibleIndex = 5;
-            this.colmarca.Width = 66;
+            this.colmarca.Width = 65;
             // 
             // colcomentario
             // 
@@ -218,7 +218,7 @@
             this.colcomentario.Name = "colcomentario";
             this.colcomentario.Visible = true;
             this.colcomentario.VisibleIndex = 6;
-            this.colcomentario.Width = 66;
+            this.colcomentario.Width = 65;
             // 
             // colbit_asignable
             // 
@@ -228,7 +228,7 @@
             this.colbit_asignable.Name = "colbit_asignable";
             this.colbit_asignable.Visible = true;
             this.colbit_asignable.VisibleIndex = 7;
-            this.colbit_asignable.Width = 66;
+            this.colbit_asignable.Width = 122;
             // 
             // repositoryItemCheckEdit1
             // 
@@ -240,7 +240,7 @@
             this.colcreated.Name = "colcreated";
             this.colcreated.Visible = true;
             this.colcreated.VisibleIndex = 8;
-            this.colcreated.Width = 66;
+            this.colcreated.Width = 47;
             // 
             // colid_estado
             // 
@@ -249,7 +249,7 @@
             this.colid_estado.Name = "colid_estado";
             this.colid_estado.Visible = true;
             this.colid_estado.VisibleIndex = 9;
-            this.colid_estado.Width = 66;
+            this.colid_estado.Width = 47;
             // 
             // colEditar
             // 
@@ -258,7 +258,7 @@
             this.colEditar.Name = "colEditar";
             this.colEditar.Visible = true;
             this.colEditar.VisibleIndex = 10;
-            this.colEditar.Width = 82;
+            this.colEditar.Width = 64;
             // 
             // cmdEditar
             // 
@@ -301,7 +301,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(790, 450);
+            this.ClientSize = new System.Drawing.Size(806, 424);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tggVerTodos);
             this.Controls.Add(this.gridControlHomeAtributos);
