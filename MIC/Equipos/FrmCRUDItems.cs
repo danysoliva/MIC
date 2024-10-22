@@ -41,14 +41,14 @@ namespace MIC.Equipos
             CargarEstados();
             CargarTipoEquipo();
             CargarCodigo();
-            
+            CargarEstadosEquipos();
         }
         UserLogin UsuarioLogeado;  //Constructor
         public FrmCRUDItems(UserLogin pUser)
         {
             InitializeComponent();
             CargarEstados();
-            CargarTipoEquipo();
+            CargarTipoEquipo(); CargarEstadosEquipos();
             UsuarioLogeado = pUser;
 
         }
@@ -115,11 +115,13 @@ namespace MIC.Equipos
             ItemActual = new Items();
             CargarEstados();
             CargarTipoEquipo();
+            CargarEstadosEquipos();
 
-            
+
             switch (ComportamientoActual)
             {
                 case ComportamientoCRUD.Insert:
+                     
                     Guardar = false;
                     break;
 
@@ -137,6 +139,7 @@ namespace MIC.Equipos
                         tggBitAsignable.IsOn = ItemActual.bit_asignable;
                         load_config_atributos_equipos();
                         tggBitMultiusuario.IsOn = ItemActual.multiusuario;
+                        gleEstadoEquipo.EditValue = ItemActual.estado_equipo;
                         
                     }
                     break;
@@ -190,6 +193,29 @@ namespace MIC.Equipos
 
                 dsItems1.Mic_Estados_Equipos.Clear();
                 adapter.Fill(dsItems1.Mic_Estados_Equipos);
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error("Error:" + ex.Message);
+            }
+        }
+
+        private void CargarEstadosEquipos()
+        {
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("dbo.sp_get_mic_estados", connection);
+                command.CommandType = CommandType.StoredProcedure;
+
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                dsItems1.estadosEquipos.Clear();
+                adapter.Fill(dsItems1.estadosEquipos);
                 connection.Close();
             }
             catch (Exception ex)
@@ -313,7 +339,7 @@ namespace MIC.Equipos
             SqlTransaction transaction = null;
             SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
 
-            if (string.IsNullOrEmpty(gleIdEstado.Text))
+            if (string.IsNullOrEmpty(gleEstadoEquipo.Text))
             {
                 CajaDialogo.Error("Debe Seleccionar un Estado de equipo!");
                 return;
@@ -373,6 +399,7 @@ namespace MIC.Equipos
                             cmd.Parameters.AddWithValue("@bit_asignable", tggBitAsignable.IsOn);
                             cmd.Parameters.AddWithValue("@id_estado", gleIdEstado.EditValue);
                             cmd.Parameters.AddWithValue("@multiusuario", tggBitMultiusuario.IsOn);
+                            cmd.Parameters.AddWithValue("@estado_equipo", gleEstadoEquipo.EditValue);
 
 
 
@@ -505,6 +532,7 @@ namespace MIC.Equipos
                         cmd.Parameters.AddWithValue("@id_estado", gleIdEstado.EditValue);
                         cmd.Parameters.AddWithValue("@id", ItemActual.id);
                         cmd.Parameters.AddWithValue("@multiusuario", tggBitMultiusuario.IsOn);
+                        cmd.Parameters.AddWithValue("@estado_equipo", gleEstadoEquipo.EditValue);
 
 
                         int id_header_tipoEquipo = Convert.ToInt32(cmd.ExecuteScalar());

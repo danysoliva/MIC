@@ -29,6 +29,8 @@ namespace MIC.Clases
         public bool enable { get; set; }
 
         public bool imprimible { get; set; }
+        
+        public int order_force { get; set; }
 
         public bool Recuperado { get; set; }
 
@@ -107,6 +109,7 @@ namespace MIC.Clases
                 command.Parameters.AddWithValue("@descripcion", descripcion);
                 command.Parameters.AddWithValue("@enable", enable);
                 command.Parameters.AddWithValue("@imprimible", imprimible);
+                command.Parameters.AddWithValue("@order_force", order_force);
 
                 id = Convert.ToInt32(command.ExecuteScalar());
                 connection.Close();

@@ -51,11 +51,6 @@ namespace MIC.Equipos
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions5 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject17 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject18 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject19 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject20 = new DevExpress.Utils.SerializableAppearanceObject();
             this.txtItemCode = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -85,13 +80,6 @@ namespace MIC.Equipos
             this.btnDelete = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.btnArchivo = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemHyperLinkEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemHyperLinkEdit();
-            this.gridControlAtributos = new DevExpress.XtraGrid.GridControl();
-            this.grdv_atributos = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colid_atributo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colatributo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colvalor = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colAddAtributo = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnAgregar = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.txtName = new DevExpress.XtraEditors.TextEdit();
             this.lblName = new System.Windows.Forms.Label();
@@ -113,6 +101,10 @@ namespace MIC.Equipos
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Dialog = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.gridControlAtributos1 = new DevExpress.XtraGrid.GridControl();
+            this.grvAtributos = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -127,9 +119,6 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnArchivo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlAtributos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdv_atributos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartamento.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUbicacion.Properties)).BeginInit();
@@ -140,6 +129,8 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.gleUser.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlAtributos1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvAtributos)).BeginInit();
             this.SuspendLayout();
             // 
             // txtItemCode
@@ -456,106 +447,11 @@ namespace MIC.Equipos
             this.repositoryItemHyperLinkEdit1.AutoHeight = false;
             this.repositoryItemHyperLinkEdit1.Name = "repositoryItemHyperLinkEdit1";
             // 
-            // gridControlAtributos
-            // 
-            this.gridControlAtributos.DataMember = "detalleEquipo";
-            this.gridControlAtributos.DataSource = this.dsItems1;
-            this.gridControlAtributos.EmbeddedNavigator.Appearance.BackColor = System.Drawing.Color.White;
-            this.gridControlAtributos.EmbeddedNavigator.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.gridControlAtributos.EmbeddedNavigator.Appearance.Options.UseBackColor = true;
-            this.gridControlAtributos.EmbeddedNavigator.Appearance.Options.UseForeColor = true;
-            this.gridControlAtributos.Location = new System.Drawing.Point(6, 258);
-            this.gridControlAtributos.MainView = this.grdv_atributos;
-            this.gridControlAtributos.Name = "gridControlAtributos";
-            this.gridControlAtributos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.btnAgregar});
-            this.gridControlAtributos.Size = new System.Drawing.Size(638, 300);
-            this.gridControlAtributos.TabIndex = 36;
-            this.gridControlAtributos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.grdv_atributos});
-            // 
-            // grdv_atributos
-            // 
-            this.grdv_atributos.Appearance.FilterPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.grdv_atributos.Appearance.FilterPanel.Options.UseFont = true;
-            this.grdv_atributos.Appearance.FocusedRow.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.grdv_atributos.Appearance.FocusedRow.Options.UseFont = true;
-            this.grdv_atributos.Appearance.FooterPanel.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.grdv_atributos.Appearance.FooterPanel.Options.UseFont = true;
-            this.grdv_atributos.Appearance.GroupRow.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.grdv_atributos.Appearance.GroupRow.Options.UseFont = true;
-            this.grdv_atributos.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grdv_atributos.Appearance.HeaderPanel.Options.UseFont = true;
-            this.grdv_atributos.Appearance.Preview.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.grdv_atributos.Appearance.Preview.Options.UseFont = true;
-            this.grdv_atributos.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.grdv_atributos.Appearance.Row.Options.UseFont = true;
-            this.grdv_atributos.Appearance.TopNewRow.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grdv_atributos.Appearance.TopNewRow.Options.UseFont = true;
-            this.grdv_atributos.Appearance.ViewCaption.BackColor = System.Drawing.Color.Gray;
-            this.grdv_atributos.Appearance.ViewCaption.BorderColor = System.Drawing.Color.Gray;
-            this.grdv_atributos.Appearance.ViewCaption.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.grdv_atributos.Appearance.ViewCaption.Options.UseBackColor = true;
-            this.grdv_atributos.Appearance.ViewCaption.Options.UseBorderColor = true;
-            this.grdv_atributos.Appearance.ViewCaption.Options.UseFont = true;
-            this.grdv_atributos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colid_atributo,
-            this.colatributo,
-            this.colvalor,
-            this.colAddAtributo});
-            this.grdv_atributos.CustomizationFormBounds = new System.Drawing.Rectangle(439, 529, 259, 352);
-            this.grdv_atributos.GridControl = this.gridControlAtributos;
-            this.grdv_atributos.Name = "grdv_atributos";
-            this.grdv_atributos.OptionsView.ShowAutoFilterRow = true;
-            this.grdv_atributos.OptionsView.ShowGroupPanel = false;
-            this.grdv_atributos.ViewCaption = "Datos Tecnicos";
-            // 
-            // colid_atributo
-            // 
-            this.colid_atributo.Caption = "Atributo";
-            this.colid_atributo.FieldName = "id_atributo";
-            this.colid_atributo.Name = "colid_atributo";
-            // 
-            // colatributo
-            // 
-            this.colatributo.Caption = "Atributo";
-            this.colatributo.FieldName = "atributo";
-            this.colatributo.Name = "colatributo";
-            this.colatributo.OptionsColumn.AllowEdit = false;
-            this.colatributo.Visible = true;
-            this.colatributo.VisibleIndex = 0;
-            this.colatributo.Width = 123;
-            // 
-            // colvalor
-            // 
-            this.colvalor.Caption = "Descripcion";
-            this.colvalor.FieldName = "dato";
-            this.colvalor.Name = "colvalor";
-            this.colvalor.Visible = true;
-            this.colvalor.VisibleIndex = 1;
-            this.colvalor.Width = 115;
-            // 
-            // colAddAtributo
-            // 
-            this.colAddAtributo.Caption = "Agregar";
-            this.colAddAtributo.ColumnEdit = this.btnAgregar;
-            this.colAddAtributo.Name = "colAddAtributo";
-            this.colAddAtributo.Width = 71;
-            // 
-            // btnAgregar
-            // 
-            this.btnAgregar.AutoHeight = false;
-            editorButtonImageOptions5.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions5.Image")));
-            this.btnAgregar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions5, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject17, serializableAppearanceObject18, serializableAppearanceObject19, serializableAppearanceObject20, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(2, 236);
+            this.label7.Location = new System.Drawing.Point(47, 249);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(136, 19);
             this.label7.TabIndex = 37;
@@ -563,11 +459,12 @@ namespace MIC.Equipos
             // 
             // txtName
             // 
-            this.txtName.Enabled = false;
             this.txtName.Location = new System.Drawing.Point(47, 86);
             this.txtName.Name = "txtName";
             this.txtName.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtName.Properties.Appearance.Options.UseFont = true;
+            this.txtName.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtName.Properties.ReadOnly = true;
             this.txtName.Size = new System.Drawing.Size(249, 26);
             this.txtName.TabIndex = 39;
             // 
@@ -587,6 +484,8 @@ namespace MIC.Equipos
             this.txtDepartamento.Name = "txtDepartamento";
             this.txtDepartamento.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDepartamento.Properties.Appearance.Options.UseFont = true;
+            this.txtDepartamento.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtDepartamento.Properties.ReadOnly = true;
             this.txtDepartamento.Size = new System.Drawing.Size(249, 26);
             this.txtDepartamento.TabIndex = 40;
             // 
@@ -596,6 +495,8 @@ namespace MIC.Equipos
             this.txtUbicacion.Name = "txtUbicacion";
             this.txtUbicacion.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUbicacion.Properties.Appearance.Options.UseFont = true;
+            this.txtUbicacion.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
+            this.txtUbicacion.Properties.ReadOnly = true;
             this.txtUbicacion.Size = new System.Drawing.Size(261, 26);
             this.txtUbicacion.TabIndex = 41;
             // 
@@ -629,6 +530,7 @@ namespace MIC.Equipos
             this.gleTipoEquipo.Name = "gleTipoEquipo";
             this.gleTipoEquipo.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gleTipoEquipo.Properties.Appearance.Options.UseFont = true;
+            this.gleTipoEquipo.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.gleTipoEquipo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gleTipoEquipo.Properties.DataSource = this.bindingSourceTipoEquipo;
@@ -660,6 +562,7 @@ namespace MIC.Equipos
             this.gleRelevancia.Name = "gleRelevancia";
             this.gleRelevancia.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gleRelevancia.Properties.Appearance.Options.UseFont = true;
+            this.gleRelevancia.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.gleRelevancia.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gleRelevancia.Properties.DropDownRows = 3;
@@ -700,6 +603,7 @@ namespace MIC.Equipos
             this.gleUser.Name = "gleUser";
             this.gleUser.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gleUser.Properties.Appearance.Options.UseFont = true;
+            this.gleUser.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
             this.gleUser.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.gleUser.Properties.DataSource = this.bindingSourceUser;
@@ -741,11 +645,58 @@ namespace MIC.Equipos
             // 
             this.Dialog.FileName = "Dialog";
             // 
+            // gridControlAtributos1
+            // 
+            this.gridControlAtributos1.DataMember = "detalleEquipo";
+            this.gridControlAtributos1.DataSource = this.dsItems1;
+            this.gridControlAtributos1.Location = new System.Drawing.Point(46, 271);
+            this.gridControlAtributos1.MainView = this.grvAtributos;
+            this.gridControlAtributos1.Name = "gridControlAtributos1";
+            this.gridControlAtributos1.Size = new System.Drawing.Size(528, 278);
+            this.gridControlAtributos1.TabIndex = 48;
+            this.gridControlAtributos1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.grvAtributos});
+            // 
+            // grvAtributos
+            // 
+            this.grvAtributos.Appearance.GroupRow.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grvAtributos.Appearance.GroupRow.Options.UseFont = true;
+            this.grvAtributos.Appearance.HeaderPanel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grvAtributos.Appearance.HeaderPanel.Options.UseFont = true;
+            this.grvAtributos.Appearance.Row.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grvAtributos.Appearance.Row.Options.UseFont = true;
+            this.grvAtributos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn7,
+            this.gridColumn8});
+            this.grvAtributos.GridControl = this.gridControlAtributos1;
+            this.grvAtributos.Name = "grvAtributos";
+            this.grvAtributos.OptionsView.ShowAutoFilterRow = true;
+            this.grvAtributos.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Atributo";
+            this.gridColumn7.FieldName = "atributo";
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.OptionsColumn.AllowEdit = false;
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 0;
+            // 
+            // gridColumn8
+            // 
+            this.gridColumn8.Caption = "Descripcion";
+            this.gridColumn8.FieldName = "dato";
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.OptionsColumn.ReadOnly = true;
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 1;
+            // 
             // frmDiagnosticoEquipos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(650, 808);
+            this.ClientSize = new System.Drawing.Size(650, 803);
+            this.Controls.Add(this.gridControlAtributos1);
             this.Controls.Add(this.gleUser);
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.cmdGuardar);
@@ -756,7 +707,6 @@ namespace MIC.Equipos
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblName);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.gridControlAtributos);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -784,9 +734,6 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.btnDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnArchivo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHyperLinkEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControlAtributos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.grdv_atributos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtName.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDepartamento.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUbicacion.Properties)).EndInit();
@@ -797,6 +744,8 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.gleUser.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSourceUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControlAtributos1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grvAtributos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -815,13 +764,6 @@ namespace MIC.Equipos
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
-        private DevExpress.XtraGrid.GridControl gridControlAtributos;
-        private DevExpress.XtraGrid.Views.Grid.GridView grdv_atributos;
-        private DevExpress.XtraGrid.Columns.GridColumn colid_atributo;
-        private DevExpress.XtraGrid.Columns.GridColumn colatributo;
-        private DevExpress.XtraGrid.Columns.GridColumn colvalor;
-        private DevExpress.XtraGrid.Columns.GridColumn colAddAtributo;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnAgregar;
         private System.Windows.Forms.Label label7;
         private dsItems dsItems1;
         private DevExpress.XtraEditors.TextEdit txtName;
@@ -861,5 +803,9 @@ namespace MIC.Equipos
         private DevExpress.XtraEditors.SimpleButton cmdUpload;
         private System.Windows.Forms.OpenFileDialog Dialog;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private DevExpress.XtraGrid.GridControl gridControlAtributos1;
+        private DevExpress.XtraGrid.Views.Grid.GridView grvAtributos;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
     }
 }

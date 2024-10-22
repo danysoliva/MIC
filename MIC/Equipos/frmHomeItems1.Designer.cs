@@ -231,7 +231,7 @@ namespace MIC.Equipos
             this.colitems_code.Caption = "Codigo";
             this.colitems_code.FieldName = "items_code";
             this.colitems_code.Name = "colitems_code";
-            this.colitems_code.OptionsColumn.AllowEdit = false;
+            this.colitems_code.OptionsColumn.ReadOnly = true;
             this.colitems_code.Visible = true;
             this.colitems_code.VisibleIndex = 0;
             this.colitems_code.Width = 84;
@@ -241,20 +241,20 @@ namespace MIC.Equipos
             this.colnombre.Caption = "Nombre";
             this.colnombre.FieldName = "nombre";
             this.colnombre.Name = "colnombre";
-            this.colnombre.OptionsColumn.AllowEdit = false;
+            this.colnombre.OptionsColumn.ReadOnly = true;
             this.colnombre.Visible = true;
             this.colnombre.VisibleIndex = 1;
-            this.colnombre.Width = 122;
+            this.colnombre.Width = 147;
             // 
             // colid_tipo_equipo
             // 
             this.colid_tipo_equipo.Caption = "Tipo De Equipo";
             this.colid_tipo_equipo.FieldName = "tipo_equipo";
             this.colid_tipo_equipo.Name = "colid_tipo_equipo";
-            this.colid_tipo_equipo.OptionsColumn.AllowEdit = false;
+            this.colid_tipo_equipo.OptionsColumn.ReadOnly = true;
             this.colid_tipo_equipo.Visible = true;
             this.colid_tipo_equipo.VisibleIndex = 2;
-            this.colid_tipo_equipo.Width = 144;
+            this.colid_tipo_equipo.Width = 139;
             // 
             // colenable
             // 
@@ -274,10 +274,10 @@ namespace MIC.Equipos
             this.colmarca.Caption = "Marca";
             this.colmarca.FieldName = "marca";
             this.colmarca.Name = "colmarca";
-            this.colmarca.OptionsColumn.AllowEdit = false;
+            this.colmarca.OptionsColumn.ReadOnly = true;
             this.colmarca.Visible = true;
             this.colmarca.VisibleIndex = 3;
-            this.colmarca.Width = 71;
+            this.colmarca.Width = 90;
             // 
             // colcomentario
             // 
@@ -307,7 +307,7 @@ namespace MIC.Equipos
             this.colcreated.OptionsColumn.AllowEdit = false;
             this.colcreated.Visible = true;
             this.colcreated.VisibleIndex = 4;
-            this.colcreated.Width = 71;
+            this.colcreated.Width = 92;
             // 
             // colid_estado
             // 
@@ -322,7 +322,7 @@ namespace MIC.Equipos
             this.colEditar.Name = "colEditar";
             this.colEditar.Visible = true;
             this.colEditar.VisibleIndex = 6;
-            this.colEditar.Width = 62;
+            this.colEditar.Width = 72;
             // 
             // cmdEditar
             // 
@@ -343,7 +343,7 @@ namespace MIC.Equipos
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 7;
-            this.gridColumn1.Width = 78;
+            this.gridColumn1.Width = 77;
             // 
             // cmdAddUser
             // 
@@ -362,7 +362,7 @@ namespace MIC.Equipos
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 8;
-            this.gridColumn2.Width = 92;
+            this.gridColumn2.Width = 74;
             // 
             // cmdDevolverEquipo
             // 
@@ -381,7 +381,7 @@ namespace MIC.Equipos
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 10;
-            this.gridColumn3.Width = 92;
+            this.gridColumn3.Width = 63;
             // 
             // cmdAdjuntarArchivos
             // 
@@ -401,7 +401,7 @@ namespace MIC.Equipos
             this.gridColumn4.OptionsColumn.AllowEdit = false;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 5;
-            this.gridColumn4.Width = 100;
+            this.gridColumn4.Width = 109;
             // 
             // gridColumn5
             // 
@@ -414,7 +414,7 @@ namespace MIC.Equipos
             this.colubicacion.Name = "colubicacion";
             this.colubicacion.Visible = true;
             this.colubicacion.VisibleIndex = 9;
-            this.colubicacion.Width = 84;
+            this.colubicacion.Width = 66;
             // 
             // cmdUbicacion
             // 
@@ -433,7 +433,7 @@ namespace MIC.Equipos
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 11;
-            this.gridColumn6.Width = 96;
+            this.gridColumn6.Width = 83;
             // 
             // cmdDiagnostico
             // 

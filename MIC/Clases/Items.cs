@@ -40,6 +40,7 @@ namespace MIC.Clases
         public string estado { get; set; }
 
         public bool multiusuario { get; set; }
+        public int estado_equipo { get; set; }
 
 
 
@@ -105,6 +106,8 @@ namespace MIC.Clases
                 if (!reader.IsDBNull(reader.GetOrdinal("multiusuario")))
                     multiusuario = reader.GetBoolean(12);
 
+                if (!reader.IsDBNull(reader.GetOrdinal("estado_equipo")))
+                    estado_equipo = reader.GetInt32(13);
                 Recuperado = true;
             }
             return Recuperado;
