@@ -699,7 +699,7 @@ namespace MIC.Reportes
             this.xrLabel7,
             this.xrTable8,
             this.xrLabel6});
-            this.Detail2.HeightF = 621.0822F;
+            this.Detail2.HeightF = 487.3737F;
             this.Detail2.Name = "Detail2";
             this.Detail2.StylePriority.UseBorders = false;
             // 
@@ -707,7 +707,7 @@ namespace MIC.Reportes
             // 
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Arial", 11F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(20.20861F, 582.9572F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(20.20874F, 450.6655F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.SizeF = new System.Drawing.SizeF(183.9583F, 28.12503F);
@@ -796,11 +796,11 @@ namespace MIC.Reportes
             // xrPictureBox2
             // 
             this.xrPictureBox2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[archivos].[imgURL]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "[archivos].[imgURL]")});
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(133.3335F, 0F);
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageSource", "[imgURL]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "[imgURL]")});
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(133.3336F, 0F);
             this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(376.4582F, 267.2545F);
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(376.4582F, 277.2545F);
             this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // DetailReport2

@@ -30,11 +30,11 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmCRUDItems));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -80,10 +80,10 @@
             this.tggBitMultiusuario = new DevExpress.XtraEditors.ToggleSwitch();
             this.label10 = new System.Windows.Forms.Label();
             this.gleEstadoEquipo = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.estadosEquiposbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.estadosEquiposbindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gleIdEstado.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.micEstadosEquiposBindingSource)).BeginInit();
@@ -103,8 +103,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tggBitMultiusuario.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gleEstadoEquipo.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosEquiposbindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -114,9 +114,9 @@
             this.label1.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(188, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(167, 19);
+            this.label1.Size = new System.Drawing.Size(164, 19);
             this.label1.TabIndex = 0;
-            this.label1.Text = "GESTION DE ITEMS";
+            this.label1.Text = "Gestión de Equipos";
             // 
             // label2
             // 
@@ -154,7 +154,7 @@
             this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(37, 206);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(69, 16);
+            this.label5.Size = new System.Drawing.Size(68, 16);
             this.label5.TabIndex = 7;
             this.label5.Text = "Habilitado:";
             // 
@@ -193,7 +193,7 @@
             this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(123, 206);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(68, 16);
+            this.label8.Size = new System.Drawing.Size(67, 16);
             this.label8.TabIndex = 13;
             this.label8.Text = "Asignable:";
             // 
@@ -268,26 +268,26 @@
             // 
             // cmdCerrar
             // 
-            this.cmdCerrar.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdCerrar.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCerrar.Appearance.Options.UseFont = true;
             this.cmdCerrar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.ImageOptions.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(302, 648);
+            this.cmdCerrar.Location = new System.Drawing.Point(293, 648);
             this.cmdCerrar.Name = "cmdCerrar";
-            this.cmdCerrar.Size = new System.Drawing.Size(103, 46);
+            this.cmdCerrar.Size = new System.Drawing.Size(104, 46);
             this.cmdCerrar.TabIndex = 9;
-            this.cmdCerrar.Text = "CERRAR";
+            this.cmdCerrar.Text = "Cerrar";
             this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
             // cmdRegistrarItem
             // 
-            this.cmdRegistrarItem.Appearance.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmdRegistrarItem.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdRegistrarItem.Appearance.Options.UseFont = true;
             this.cmdRegistrarItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdRegistrarItem.ImageOptions.Image")));
-            this.cmdRegistrarItem.Location = new System.Drawing.Point(140, 648);
+            this.cmdRegistrarItem.Location = new System.Drawing.Point(184, 648);
             this.cmdRegistrarItem.Name = "cmdRegistrarItem";
-            this.cmdRegistrarItem.Size = new System.Drawing.Size(156, 46);
+            this.cmdRegistrarItem.Size = new System.Drawing.Size(104, 46);
             this.cmdRegistrarItem.TabIndex = 8;
-            this.cmdRegistrarItem.Text = "REGISTRAR ITEM";
+            this.cmdRegistrarItem.Text = "Guardar";
             this.cmdRegistrarItem.Click += new System.EventHandler(this.cmdRegistrarItem_Click);
             // 
             // tggEnable
@@ -480,9 +480,9 @@
             // btnAgregar
             // 
             this.btnAgregar.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnAgregar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
@@ -538,7 +538,7 @@
             this.label10.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(206, 206);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(82, 16);
+            this.label10.Size = new System.Drawing.Size(81, 16);
             this.label10.TabIndex = 30;
             this.label10.Text = "Multiusuario:";
             // 
@@ -557,6 +557,11 @@
             this.gleEstadoEquipo.Properties.ValueMember = "id";
             this.gleEstadoEquipo.Size = new System.Drawing.Size(235, 26);
             this.gleEstadoEquipo.TabIndex = 31;
+            // 
+            // estadosEquiposbindingSource
+            // 
+            this.estadosEquiposbindingSource.DataMember = "estadosEquipos";
+            this.estadosEquiposbindingSource.DataSource = this.dsItems1;
             // 
             // gridView2
             // 
@@ -580,11 +585,6 @@
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 0;
-            // 
-            // estadosEquiposbindingSource
-            // 
-            this.estadosEquiposbindingSource.DataMember = "estadosEquipos";
-            this.estadosEquiposbindingSource.DataSource = this.dsItems1;
             // 
             // FrmCRUDItems
             // 
@@ -638,8 +638,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnAgregar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tggBitMultiusuario.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gleEstadoEquipo.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.estadosEquiposbindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

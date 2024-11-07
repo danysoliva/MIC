@@ -339,7 +339,7 @@ namespace MIC.Equipos
             DataOperations dp = new DataOperations();
             SqlTransaction transaction = null;
             SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
-
+            gleIdEstado.EditValue = 3;
             if (string.IsNullOrEmpty(gleEstadoEquipo.Text))
             {
                 CajaDialogo.Error("Debe Seleccionar un Estado de equipo!");
@@ -373,6 +373,7 @@ namespace MIC.Equipos
                 case ComportamientoCRUD.Insert:
                     
                         ItemActual.id_estado = dp.ValidateNumberInt32(gleIdEstado.EditValue);
+                        ItemActual.estado_equipo = dp.ValidateNumberInt32(gleEstadoEquipo.EditValue);
                         ItemActual.nombre = txtName.Text;
                         ItemActual.id_tipo_equipo = dp.ValidateNumberInt32(gleTipoEquipo.EditValue);
                         ItemActual.marca = txtMarca.Text;
