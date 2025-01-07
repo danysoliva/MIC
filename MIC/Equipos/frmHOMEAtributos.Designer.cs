@@ -250,7 +250,7 @@
             this.Controls.Add(this.cmdNuevoAtributo);
             this.Name = "frmHOMEAtributos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "frmHOMEAtributos";
+            this.Text = "Gestión de Atributos";
             this.Load += new System.EventHandler(this.frmHOMEAtributos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHomeAtributos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsAtributos1)).EndInit();

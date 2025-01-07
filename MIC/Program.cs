@@ -18,7 +18,8 @@ namespace MIC
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             UserLogin UsuarioLogeado = new UserLogin();
-            Application.Run(new frmLogin());
+            //Application.Run(new frmLogin());
+            Application.Run(new frmContenedorGeneral());
         }
     }
 }

@@ -70,7 +70,7 @@ namespace MIC.Equipos
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(172, 28);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(168, 16);
+            this.label1.Size = new System.Drawing.Size(167, 16);
             this.label1.TabIndex = 1;
             this.label1.Text = "GESTION DE USUARIOS";
             // 
@@ -303,7 +303,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.label1);
             this.Name = "frmUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUsers";
+            this.Text = "Usuarios";
             this.Load += new System.EventHandler(this.frmUsers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();

@@ -90,7 +90,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtUbicaciones);
             this.Name = "frmAddUbicacion";
-            this.Text = "frmAddUbicacion";
+            this.Text = "Agregar Ubicación";
             this.Load += new System.EventHandler(this.frmAddUbicacion_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtUbicaciones.Properties)).EndInit();
             this.ResumeLayout(false);

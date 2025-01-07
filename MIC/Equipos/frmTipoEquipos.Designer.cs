@@ -288,7 +288,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.label6);
             this.Name = "frmTipoEquipos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmTipoEquipos";
+            this.Text = "Tipo de Equipo";
             this.Load += new System.EventHandler(this.frmTipoEquipos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcionCompleta.Properties)).EndInit();

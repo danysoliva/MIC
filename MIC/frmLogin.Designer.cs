@@ -33,15 +33,15 @@ namespace MIC
             this.labelControl3 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl2 = new DevExpress.XtraEditors.LabelControl();
-            this.txtClave = new DevExpress.XtraEditors.TextEdit();
-            this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
             this.cmdLogin = new DevExpress.XtraEditors.SimpleButton();
             this.cmdCerrar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAdmin = new DevExpress.XtraEditors.SimpleButton();
             this.pictureEdit1 = new DevExpress.XtraEditors.PictureEdit();
+            this.txtClave = new DevExpress.XtraEditors.TextEdit();
+            this.txtUsuario = new DevExpress.XtraEditors.TextEdit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClave.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // labelControl3
@@ -79,33 +79,6 @@ namespace MIC
             this.labelControl2.Size = new System.Drawing.Size(47, 24);
             this.labelControl2.TabIndex = 16;
             this.labelControl2.Text = "Clave";
-            // 
-            // txtClave
-            // 
-            this.txtClave.EditValue = "";
-            this.txtClave.Location = new System.Drawing.Point(123, 162);
-            this.txtClave.Name = "txtClave";
-            this.txtClave.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.txtClave.Properties.Appearance.Options.UseFont = true;
-            this.txtClave.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtClave.Properties.ContextImageOptions.Image")));
-            this.txtClave.Properties.UseSystemPasswordChar = true;
-            this.txtClave.Size = new System.Drawing.Size(222, 36);
-            this.txtClave.TabIndex = 14;
-            this.txtClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClave_KeyDown);
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.EditValue = "";
-            this.txtUsuario.Location = new System.Drawing.Point(123, 104);
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
-            this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
-            this.txtUsuario.Properties.Appearance.Options.UseFont = true;
-            this.txtUsuario.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
-            this.txtUsuario.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtUsuario.Properties.ContextImageOptions.Image")));
-            this.txtUsuario.Size = new System.Drawing.Size(222, 36);
-            this.txtUsuario.TabIndex = 13;
-            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // cmdLogin
             // 
@@ -161,9 +134,36 @@ namespace MIC
             this.pictureEdit1.Location = new System.Drawing.Point(366, 102);
             this.pictureEdit1.Name = "pictureEdit1";
             this.pictureEdit1.Properties.ShowCameraMenuItem = DevExpress.XtraEditors.Controls.CameraMenuItemVisibility.Auto;
-            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Stretch;
+            this.pictureEdit1.Properties.SizeMode = DevExpress.XtraEditors.Controls.PictureSizeMode.Zoom;
             this.pictureEdit1.Size = new System.Drawing.Size(113, 96);
             this.pictureEdit1.TabIndex = 21;
+            // 
+            // txtClave
+            // 
+            this.txtClave.EditValue = "";
+            this.txtClave.Location = new System.Drawing.Point(123, 162);
+            this.txtClave.Name = "txtClave";
+            this.txtClave.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.txtClave.Properties.Appearance.Options.UseFont = true;
+            this.txtClave.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtClave.Properties.ContextImageOptions.Image")));
+            this.txtClave.Properties.UseSystemPasswordChar = true;
+            this.txtClave.Size = new System.Drawing.Size(222, 36);
+            this.txtClave.TabIndex = 14;
+            this.txtClave.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtClave_KeyDown);
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.EditValue = "";
+            this.txtUsuario.Location = new System.Drawing.Point(123, 104);
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Properties.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.txtUsuario.Properties.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F);
+            this.txtUsuario.Properties.Appearance.Options.UseFont = true;
+            this.txtUsuario.Properties.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.False;
+            this.txtUsuario.Properties.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("txtUsuario.Properties.ContextImageOptions.Image")));
+            this.txtUsuario.Size = new System.Drawing.Size(222, 36);
+            this.txtUsuario.TabIndex = 13;
+            this.txtUsuario.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsuario_KeyDown);
             // 
             // frmLogin
             // 
@@ -181,11 +181,11 @@ namespace MIC
             this.Controls.Add(this.txtUsuario);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmLogin";
+            this.Text = "Inicio de Sesión";
             this.Load += new System.EventHandler(this.frmLogin_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtClave.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsuario.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureEdit1.Properties)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

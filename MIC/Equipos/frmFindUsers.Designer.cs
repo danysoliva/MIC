@@ -162,7 +162,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.grd_data);
             this.Name = "frmFindUsers";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmFindUsers";
+            this.Text = "Usuarios";
             ((System.ComponentModel.ISupportInitialize)(this.grd_data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdv_data)).EndInit();

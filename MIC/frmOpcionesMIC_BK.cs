@@ -13,7 +13,7 @@ using DevExpress.XtraNavBar;
 
 namespace MIC
 {
-    public partial class Form1 : DevExpress.XtraEditors.XtraForm
+    public partial class frmOpcionesMIC_BK : DevExpress.XtraEditors.XtraForm
     {
         private int childFormNumber = 0;
         UserLogin UsuarioLogeado;
@@ -23,7 +23,7 @@ namespace MIC
         string ActiveADUser;
         DataTable UserGroups;
 
-        public Form1(UserLogin pUser)
+        public frmOpcionesMIC_BK(UserLogin pUser)
         {
             InitializeComponent();
             UsuarioLogeado = pUser;

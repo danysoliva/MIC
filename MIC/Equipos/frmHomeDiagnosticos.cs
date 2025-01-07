@@ -73,6 +73,7 @@ namespace MIC.Equipos
             MIC.Reportes.rptDiagnostico rpt = new Reportes.rptDiagnostico(row.id);
             rpt.PrintingSystem.Document.AutoFitToPagesWidth = 1;
             ReportPrintTool printReport = new ReportPrintTool(rpt);
+            
             printReport.ShowPreview();
         }
 

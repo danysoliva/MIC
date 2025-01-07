@@ -617,7 +617,7 @@
             this.Controls.Add(this.label1);
             this.Name = "FrmCRUDItems";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Gestion_de_Items";
+            this.Text = "Gestión de Items";
             this.Load += new System.EventHandler(this.FrmCRUDItems_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gleIdEstado.Properties)).EndInit();

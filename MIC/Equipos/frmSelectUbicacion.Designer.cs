@@ -284,7 +284,7 @@ namespace MIC.Equipos
             this.ClientSize = new System.Drawing.Size(474, 545);
             this.Controls.Add(this.navigationFrame1);
             this.Name = "frmSelectUbicacion";
-            this.Text = "frmSelectUbicacion";
+            this.Text = "Seleccionar Ubicación";
             ((System.ComponentModel.ISupportInitialize)(this.navigationFrame1)).EndInit();
             this.navigationFrame1.ResumeLayout(false);
             this.navigationPage1.ResumeLayout(false);
