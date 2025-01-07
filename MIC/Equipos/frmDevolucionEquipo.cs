@@ -19,7 +19,7 @@ namespace MIC.Equipos
        
         DataOperations dp = new DataOperations();
         UserLogin UsuarioLogeado;
-        SqlTransaction transaction = null;
+        //SqlTransaction transaction = null;
         public frmDevolucionEquipo(UserLogin pUser)
         {
             InitializeComponent();

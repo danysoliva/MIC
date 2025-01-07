@@ -149,7 +149,7 @@ namespace MIC
                 }
                 else if (HostName == "9SSCBV2")
                 {
-                    IdUser = 1137;
+                    IdUser = 1172;
                 }
                 else if (HostName == "6G1SST3")
                 {
@@ -209,7 +209,8 @@ namespace MIC
             }
             Form1 frm = new Form1(Log1);
             frm.MdiParent = this.MdiParent;
-            frm.Show();
+            if (frm.ShowDialog() == DialogResult.OK)
+                frm.Show();
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)
