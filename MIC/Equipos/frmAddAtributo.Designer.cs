@@ -89,17 +89,17 @@ namespace MIC.Equipos
             this.lblAtributo.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAtributo.Location = new System.Drawing.Point(32, 64);
             this.lblAtributo.Name = "lblAtributo";
-            this.lblAtributo.Size = new System.Drawing.Size(109, 16);
+            this.lblAtributo.Size = new System.Drawing.Size(108, 16);
             this.lblAtributo.TabIndex = 25;
             this.lblAtributo.Text = "Agregar Atributos";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Siemens Sans", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(74, 21);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(172, 21);
+            this.label2.Size = new System.Drawing.Size(173, 24);
             this.label2.TabIndex = 26;
             this.label2.Text = "Agregar Atributos";
             // 
@@ -159,7 +159,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.cmdAgregarAtributo);
             this.Name = "frmAddAtributo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmAddAtributos";
+            this.Text = "Agregar Atributos";
             this.Load += new System.EventHandler(this.frmAddAtributo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtVarchar.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtNumeric.Properties)).EndInit();

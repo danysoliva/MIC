@@ -224,10 +224,9 @@
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.labelControl2);
             this.Controls.Add(this.labelControl1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmCRUDAtributos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmCRUDAtributos";
+            this.Text = "Gestión de Atributos";
             this.Load += new System.EventHandler(this.frmCRUDAtributos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtDescripcion.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tggEnable.Properties)).EndInit();

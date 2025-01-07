@@ -542,7 +542,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.cmdSalir);
             this.Controls.Add(this.cmdNuevoItems);
             this.Name = "frmFindAtributos";
-            this.Text = "frmHomeItems1";
+            this.Text = "Gestión de Items";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.frmHomeItems1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tggVerTodos.Properties)).EndInit();

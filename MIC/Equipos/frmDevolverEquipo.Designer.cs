@@ -94,7 +94,7 @@ namespace MIC.Equipos
             this.label1.Font = new System.Drawing.Font("Perpetua Titling MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(160, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(149, 16);
+            this.label1.Size = new System.Drawing.Size(148, 16);
             this.label1.TabIndex = 27;
             this.label1.Text = "DEVOLVER EQUIPOS";
             // 
@@ -308,7 +308,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.label1);
             this.Name = "frmDevolverEquipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDevolverEquipo";
+            this.Text = "Devolver Equipo";
             this.Load += new System.EventHandler(this.frmDevolverEquipo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.txtNombre.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridDevolverEquipos)).EndInit();

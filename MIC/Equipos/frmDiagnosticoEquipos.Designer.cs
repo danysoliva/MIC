@@ -723,7 +723,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.label2);
             this.Name = "frmDiagnosticoEquipos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmDiagnosticoEquipos";
+            this.Text = "Diagnostico de Equipo";
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).EndInit();
             this.tabControl1.ResumeLayout(false);

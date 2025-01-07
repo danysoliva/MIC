@@ -257,7 +257,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.txtUbicaciones);
             this.Controls.Add(this.groupBox1);
             this.Name = "frmUbicacionesOP";
-            this.Text = "frmUbicacionesOP";
+            this.Text = "Ubicaciones";
             this.Load += new System.EventHandler(this.frmUbicacionesOP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tggenable.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUbicaciones.Properties)).EndInit();

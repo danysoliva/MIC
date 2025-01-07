@@ -275,10 +275,9 @@ namespace MIC.Equipos
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmUbicacionEquipo";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmUbicacionEquipo";
+            this.Text = "Ubicación de Equipo";
             ((System.ComponentModel.ISupportInitialize)(this.gridControlUbicacionxUser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdv_data)).EndInit();

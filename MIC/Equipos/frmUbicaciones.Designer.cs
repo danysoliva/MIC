@@ -170,7 +170,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.simpleButton1);
             this.Controls.Add(this.grd_data);
             this.Name = "frmUbicaciones";
-            this.Text = "frmUbicaciones";
+            this.Text = "Nueva Ubicación";
             this.Load += new System.EventHandler(this.frmUbicaciones_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grd_data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).EndInit();

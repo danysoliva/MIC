@@ -102,11 +102,11 @@ namespace MIC.Equipos
             this.grdv_data.Appearance.GroupPanel.Options.UseFont = true;
             this.grdv_data.Appearance.GroupRow.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.grdv_data.Appearance.GroupRow.Options.UseFont = true;
-            this.grdv_data.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.grdv_data.Appearance.HeaderPanel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdv_data.Appearance.HeaderPanel.Options.UseFont = true;
             this.grdv_data.Appearance.Preview.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.grdv_data.Appearance.Preview.Options.UseFont = true;
-            this.grdv_data.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 11.25F);
+            this.grdv_data.Appearance.Row.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.grdv_data.Appearance.Row.Options.UseFont = true;
             this.grdv_data.Appearance.TopNewRow.Font = new System.Drawing.Font("Segoe UI", 11.25F);
             this.grdv_data.Appearance.TopNewRow.Options.UseFont = true;
@@ -281,7 +281,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.label8);
             this.Controls.Add(this.gridControlDiagnosticos);
             this.Name = "frmHomeDiagnosticos";
-            this.Text = "frmHomeDiagnosticos";
+            this.Text = "Home Diagnosticos";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDiagnosticos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).EndInit();

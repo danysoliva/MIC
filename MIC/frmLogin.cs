@@ -18,9 +18,11 @@ namespace MIC
 {
     public partial class frmLogin : DevExpress.XtraEditors.XtraForm
     {
-        public frmLogin()
+        private frmContenedorGeneral frmContenedorPrincipal;
+        public frmLogin(frmContenedorGeneral pfrmContenedorPrincipal)
         {
             InitializeComponent();
+            frmContenedorPrincipal = pfrmContenedorPrincipal;
         }
         public int IdUser;
         private void labelControl3_Click(object sender, EventArgs e)
@@ -117,11 +119,13 @@ namespace MIC
                     }
                     Log1.Pass = txtClave.Text;
                     Log1.GrupoUsuario.GrupoUsuarioActivo = (GrupoUser.GrupoUsuario)Log1.IdGrupo;
-                    Form1 frm = new Form1(Log1);
-                    if (this.MdiParent != null)
-                        frm.MdiParent = this.MdiParent;
+                    //frmOpcionesMIC_BK frm = new frmOpcionesMIC_BK(Log1);
+                    //if (this.MdiParent != null)
+                    //    frm.MdiParent = this.MdiParent;
 
-                    frm.Show();
+                    frmContenedorPrincipal.LlamarEvento(Log1);
+                    this.Close();
+                    //frm.Show();
 
                     this.DialogResult = System.Windows.Forms.DialogResult.OK;
                 }
@@ -207,9 +211,14 @@ namespace MIC
                 //Log1.Id = 1069;
                 //Log1.GrupoUsuario.GrupoUsuarioActivo = GrupoUser.GrupoUsuario.Calidad;
             }
-            Form1 frm = new Form1(Log1);
-            frm.MdiParent = this.MdiParent;
-            frm.Show();
+            //frmOpcionesMIC_BK frm = new frmOpcionesMIC_BK(Log1);
+            //frm.MdiParent = this.MdiParent;
+
+            frmContenedorPrincipal.LlamarEvento(Log1);
+            this.Close();
+            //if (this.MdiParent != null)
+            //    frm.MdiParent = this.MdiParent;
+            //frm.Show();
         }
 
         private void txtUsuario_KeyDown(object sender, KeyEventArgs e)

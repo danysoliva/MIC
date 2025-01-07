@@ -65,7 +65,7 @@ namespace MIC.Equipos
             this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(554, 30);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(113, 16);
+            this.label1.Size = new System.Drawing.Size(112, 16);
             this.label1.TabIndex = 24;
             this.label1.Text = "VER HABILITADOS";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -274,7 +274,7 @@ namespace MIC.Equipos
             this.Controls.Add(this.cmdNuevoAtributo);
             this.Name = "frmHomeAtributos1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frmHomeAtributos1";
+            this.Text = "Gestión de Atributos";
             this.Load += new System.EventHandler(this.frmHomeAtributos1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tggVerTodos.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHomeAtributos)).EndInit();
