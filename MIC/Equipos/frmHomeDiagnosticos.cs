@@ -17,18 +17,29 @@ namespace MIC.Equipos
 {
     public partial class frmHomeDiagnosticos : DevExpress.XtraEditors.XtraForm
     {
+        int IdEquipo;
+        UserLogin UsuarioLogueado;
         public frmHomeDiagnosticos(UserLogin pUser)
         {
             InitializeComponent();
+            CargarDiagnosticos();
+            UsuarioLogueado = pUser;
+            cmdAgregarNuevo.Enabled = false;
+        }
+
+        public frmHomeDiagnosticos(UserLogin pUser, int pIdInt)
+        {
+            InitializeComponent();
+            IdEquipo = pIdInt;
             CargarDiagnosticos();
             UsuarioLogueado = pUser;
         }
 
         private void label8_Click(object sender, EventArgs e)
         {
-
+            
         }
-        UserLogin UsuarioLogueado;
+
         private void CargarDiagnosticos()
         {
             try
@@ -37,8 +48,18 @@ namespace MIC.Equipos
                 SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
                 connection.Open();
 
-                SqlCommand command = new SqlCommand("sp_get_all_mic_diagnosticos", connection);
-                command.CommandType = CommandType.StoredProcedure;
+                SqlCommand command;
+                if (IdEquipo > 0)
+                {
+                    command = new SqlCommand("[sp_get_all_mic_diagnosticos_by_id_equipo]", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                    command.Parameters.AddWithValue("@id_equipo", IdEquipo);
+                }
+                else
+                {
+                    command = new SqlCommand("sp_get_all_mic_diagnosticos", connection);
+                    command.CommandType = CommandType.StoredProcedure;
+                }
 
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
 
@@ -80,6 +101,17 @@ namespace MIC.Equipos
         private void cmdSalir_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void cmdRefresh_Click(object sender, EventArgs e)
+        {
+            CargarDiagnosticos();
+        }
+
+        private void cmdAgregarNuevo_Click(object sender, EventArgs e)
+        {
+            frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Nuevo, IdEquipo, 0, UsuarioLogueado);
+            frm.Show();
         }
     }
 }

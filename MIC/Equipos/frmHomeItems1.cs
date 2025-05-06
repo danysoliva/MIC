@@ -343,13 +343,12 @@ namespace MIC.Equipos
         {
             var gridView = (GridView)gridControlHomeItems.FocusedView;
             var row = (dsItems.itemsRow)gridView.GetFocusedDataRow();
-            frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Nuevo, row.id,0, UsuarioLogeado);
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                CargarItems(true);
-
-                
-            }
+            //frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Nuevo, row.id,0, UsuarioLogeado);
+            frmHomeDiagnosticos frm = new frmHomeDiagnosticos(UsuarioLogeado, row.id);
+            frm.WindowState = FormWindowState.Normal;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
