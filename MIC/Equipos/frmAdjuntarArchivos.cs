@@ -77,7 +77,21 @@ namespace MIC.Equipos
 
                 FtpWebRequest request = (FtpWebRequest)WebRequest.Create(pathSource);
                 //request.Credentials = new NetworkCredential(dp.User_FTP_Server, dp.Password_UserFTPServer);
-                request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass, "AQUAFEEDHN.COM");
+                string user_ = string.Empty;
+                string pass_ = string.Empty;
+                if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
+                {
+                    user_ = "operador";
+                    pass_ = "Tempo1234";
+                }
+                else
+                {
+                    user_ = UsuarioLogeado.ADuser1;
+                    pass_ = UsuarioLogeado.Pass;
+                }
+
+                //request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass, "AQUAFEEDHN.COM");
+                request.Credentials = new NetworkCredential(user_, pass_, "AQUAFEEDHN.COM");
                 request.Method = WebRequestMethods.Ftp.DownloadFile;
 
                 using (Stream ftpStream = request.GetResponse().GetResponseStream())
