@@ -378,8 +378,8 @@ namespace MIC.Equipos
                 this.DialogResult = DialogResult.OK;
                 this.Close();
 
-                frmHomeDiagnosticos frm = new frmHomeDiagnosticos(this.UsuarioLogeado);
-                frm.Show();
+                //frmHomeDiagnosticos frm = new frmHomeDiagnosticos(this.UsuarioLogeado);
+                //frm.Show();
 
                 //MIC.Reportes.rptEntregaEquipos rpt = new Reportes.rptEntregaEquipos(id_item, row1.user, row1.id);
                 //rpt.PrintingSystem.Document.AutoFitToPagesWidth = 1;
