@@ -303,97 +303,97 @@ namespace MIC.Equipos
             if (r != DialogResult.Yes)
                 return;
 
-                     
-                        SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
-                        try
-                        {
 
-                            cn.Open();
-                            transaction = cn.BeginTransaction("Transaction Order");
+            SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+            try
+            {
 
-                            SqlCommand cmd = cn.CreateCommand();
-                            cmd.CommandText = "sp_setInsertNewMic_Diagnosticos";
-                            cmd.Connection = cn;
-                            cmd.Transaction = transaction;
-                            cmd.CommandType = CommandType.StoredProcedure;
-                            cmd.Parameters.AddWithValue("@idEquipo", id_item);
-                            cmd.Parameters.AddWithValue("@equipo", txtName.Text);
-                            cmd.Parameters.AddWithValue("@idUsuario",gleUser.EditValue);
-                            cmd.Parameters.AddWithValue("@usuario", gleUser.Text);
-                            cmd.Parameters.AddWithValue("@tipoEquipo", gleTipoEquipo.EditValue);
-                            cmd.Parameters.AddWithValue("@relevancia", gleRelevancia.Text);
-                            cmd.Parameters.AddWithValue("@ubicacionGeneral", txtDepartamento.Text);
-                            cmd.Parameters.AddWithValue("@ubicacionEspecifica", txtUbicacion.Text);
-                            cmd.Parameters.AddWithValue("@falla", rxtReporte.Text);
-                            cmd.Parameters.AddWithValue("@diagnostico", rxtDiagnostico.Text);
-                            cmd.Parameters.AddWithValue("@encargadoIT", 1137);
+                cn.Open();
+                transaction = cn.BeginTransaction("Transaction Order");
 
-                            int id_header_diag = Convert.ToInt32(cmd.ExecuteScalar());
+                SqlCommand cmd = cn.CreateCommand();
+                cmd.CommandText = "sp_setInsertNewMic_Diagnosticos";
+                cmd.Connection = cn;
+                cmd.Transaction = transaction;
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@idEquipo", id_item);
+                cmd.Parameters.AddWithValue("@equipo", txtName.Text);
+                cmd.Parameters.AddWithValue("@idUsuario", gleUser.EditValue);
+                cmd.Parameters.AddWithValue("@usuario", gleUser.Text);
+                cmd.Parameters.AddWithValue("@tipoEquipo", gleTipoEquipo.EditValue);
+                cmd.Parameters.AddWithValue("@relevancia", gleRelevancia.Text);
+                cmd.Parameters.AddWithValue("@ubicacionGeneral", txtDepartamento.Text);
+                cmd.Parameters.AddWithValue("@ubicacionEspecifica", txtUbicacion.Text);
+                cmd.Parameters.AddWithValue("@falla", rxtReporte.Text);
+                cmd.Parameters.AddWithValue("@diagnostico", rxtDiagnostico.Text);
+                cmd.Parameters.AddWithValue("@encargadoIT", UsuarioLogeado.Id);
 
-                                foreach(dsItems.detalleEquipoRow row in dsItems1.detalleEquipo.Rows)
-                                 {
-                                     cmd.Parameters.Clear();
-                                     cmd.CommandText = "sp_setInsertNewDetalleAtributosDiagnostico";
-                                     cmd.Connection = cn;
-                                     cmd.Transaction = transaction;
-                                     cmd.CommandType = CommandType.StoredProcedure;
-                                     cmd.Parameters.AddWithValue("@atributo", row.atributo);
-                                     cmd.Parameters.AddWithValue("@descripcion", row.dato);
-                                     cmd.Parameters.AddWithValue("@id_diagnostico", id_header_diag);
+                int id_header_diag = Convert.ToInt32(cmd.ExecuteScalar());
 
-                                     cmd.ExecuteNonQuery();
-                                 }
+                foreach (dsItems.detalleEquipoRow row in dsItems1.detalleEquipo.Rows)
+                {
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "sp_setInsertNewDetalleAtributosDiagnostico";
+                    cmd.Connection = cn;
+                    cmd.Transaction = transaction;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@atributo", row.atributo);
+                    cmd.Parameters.AddWithValue("@descripcion", row.dato);
+                    cmd.Parameters.AddWithValue("@id_diagnostico", id_header_diag);
 
-                                foreach (dsItems.archivosRow row in dsItems1.archivos.Rows)
-                                 {
-                                    pathFile = Convert.ToString(row["path"]);
-                                    fileName = Convert.ToString(row["fileName"]);
-                                    cmd.Parameters.Clear();
-                                    cmd.CommandText = "sp_setInsertNewArchivoAdjuntoDiagnostico";
-                                    cmd.Transaction = transaction;
-                                    cmd.CommandType = CommandType.StoredProcedure;
-                                    cmd.Parameters.AddWithValue("@path", dp.FTP_MIC_DIAG + row["fileName"]);
-                                    cmd.Parameters.AddWithValue("@file_name", row.fileName);
-                                    cmd.Parameters.AddWithValue("@id_item", id_item);
-                                    cmd.Parameters.AddWithValue("@id_diagnostico", id_header_diag);
+                    cmd.ExecuteNonQuery();
+                }
+
+                foreach (dsItems.archivosRow row in dsItems1.archivos.Rows)
+                {
+                    pathFile = Convert.ToString(row["path"]);
+                    fileName = Convert.ToString(row["fileName"]);
+                    cmd.Parameters.Clear();
+                    cmd.CommandText = "sp_setInsertNewArchivoAdjuntoDiagnostico";
+                    cmd.Transaction = transaction;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@path", dp.FTP_MIC_DIAG + row["fileName"]);
+                    cmd.Parameters.AddWithValue("@file_name", row.fileName);
+                    cmd.Parameters.AddWithValue("@id_item", id_item);
+                    cmd.Parameters.AddWithValue("@id_diagnostico", id_header_diag);
 
 
-                                    cmd.ExecuteNonQuery();
+                    cmd.ExecuteNonQuery();
 
-                                    Upload(pathFile, fileName);
-                                 }
+                    Upload(pathFile, fileName);
+                }
 
                 //APMSV2.IT.Reportes.rptEntregaEquipo rpt = new Reportes.rptEntregaEquipo(id_Equipo, row.user, row.id);
                 //rpt.PrintingSystem.Document.AutoFitToPagesWidth = 1;
                 //ReportPrintTool printReport = new ReportPrintTool(rpt);
                 //printReport.ShowPreview();
 
-             
 
 
-                             transaction.Commit();
-                             //Guardar = true;
-                            CajaDialogo.InformationAuto();
-                            
-                             this.DialogResult = DialogResult.OK;
-                            this.Close();
 
-                                frmHomeDiagnosticos frm = new frmHomeDiagnosticos(this.UsuarioLogeado);
-                                frm.Show();
+                transaction.Commit();
+                //Guardar = true;
+                CajaDialogo.InformationAuto();
+
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+
+                frmHomeDiagnosticos frm = new frmHomeDiagnosticos(this.UsuarioLogeado);
+                frm.Show();
 
                 //MIC.Reportes.rptEntregaEquipos rpt = new Reportes.rptEntregaEquipos(id_item, row1.user, row1.id);
                 //rpt.PrintingSystem.Document.AutoFitToPagesWidth = 1;
                 //ReportPrintTool printReport = new ReportPrintTool(rpt);
                 //printReport.ShowPreview();
             }
-                        catch (Exception ex)
-                        {
-                            transaction.Rollback();
-                            CajaDialogo.Error(ex.Message);
-                         }      
-                        
-                
-            
+            catch (Exception ex)
+            {
+                transaction.Rollback();
+                CajaDialogo.Error(ex.Message);
+            }
+
+
+
         }
 
         private void cmdUpload_Click(object sender, EventArgs e)
@@ -594,7 +594,23 @@ namespace MIC.Equipos
                     DataOperations dp = new DataOperations();
 
                     FtpWebRequest request = (FtpWebRequest)WebRequest.Create(dp.FTP_MIC_DIAG + fileName);//crear el archivo en el server
-                    request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass);
+
+                    string user_ = string.Empty; 
+                    string passwd = string.Empty;
+
+                    if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
+                    {
+                        user_ = "operador";
+                        passwd = "Tempo1234";
+                    }
+                    else
+                    {
+                        user_ = UsuarioLogeado.ADuser1;
+                        passwd = UsuarioLogeado.Pass;
+                    }
+
+                    //request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass);
+                    request.Credentials = new NetworkCredential(user_, passwd);
                     request.Method = WebRequestMethods.Ftp.UploadFile;
 
                     using (Stream fileStream = File.OpenRead(pathFile))//del pc local la ruta

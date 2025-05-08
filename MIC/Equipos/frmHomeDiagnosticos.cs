@@ -12,6 +12,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using static DevExpress.Data.Mask.Internal.MaskSettings<T>;
 
 namespace MIC.Equipos
 {
@@ -112,6 +113,40 @@ namespace MIC.Equipos
         {
             frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Nuevo, IdEquipo, 0, UsuarioLogueado);
             frm.Show();
+        }
+
+        private void cmdAnularDiagnostico_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            DialogResult r = CajaDialogo.Pregunta("Esta seguro(a) de cancelar este diagnostico?");
+            if (r != DialogResult.Yes)
+                return;
+
+            var gridView = (GridView)gridControlDiagnosticos.FocusedView;
+            var row = (dsItems.DiagnosticosRow)gridView.GetFocusedDataRow();
+
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                connection.Open();
+
+                SqlCommand command;
+
+                command = new SqlCommand("[sp_set_anular_diagnostico]", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("@id_diagnostico", row.id);
+                command.Parameters.AddWithValue("@enable", 0);
+                command.Parameters.AddWithValue("@id_usuario_ultima_actualizacion", this.UsuarioLogueado.Id);
+                command.Parameters.AddWithValue("@fecha_last_update", DateTime.Now);
+                command.ExecuteNonQuery();
+
+                connection.Close();
+                CargarDiagnosticos();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error("Error:" + ex.Message);
+            }
         }
     }
 }
