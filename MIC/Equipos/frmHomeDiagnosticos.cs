@@ -80,7 +80,7 @@ namespace MIC.Equipos
             var gridView = (GridView)gridControlDiagnosticos.FocusedView;
             var row = (dsItems.DiagnosticosRow)gridView.GetFocusedDataRow();
 
-            frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Ver,row.idEquipo,row.id,UsuarioLogueado);
+            frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.View,row.idEquipo,row.id,UsuarioLogueado);
             if (frm.ShowDialog() == DialogResult.OK)
             {
 
@@ -146,6 +146,18 @@ namespace MIC.Equipos
             catch (Exception ex)
             {
                 CajaDialogo.Error("Error:" + ex.Message);
+            }
+        }
+
+        private void cmdUpdateDiagnostico_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridView = (GridView)gridControlDiagnosticos.FocusedView;
+            var row = (dsItems.DiagnosticosRow)gridView.GetFocusedDataRow();
+
+            frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Update, row.idEquipo, row.id, UsuarioLogueado);
+            if (frm.ShowDialog() == DialogResult.OK)
+            {
+
             }
         }
     }

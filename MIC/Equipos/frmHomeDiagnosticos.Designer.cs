@@ -45,6 +45,11 @@ namespace MIC.Equipos
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject10 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject11 = new DevExpress.Utils.SerializableAppearanceObject();
             DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject12 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions4 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject13 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject14 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject15 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject16 = new DevExpress.Utils.SerializableAppearanceObject();
             this.gridControlDiagnosticos = new DevExpress.XtraGrid.GridControl();
             this.dsItems1 = new MIC.Equipos.dsItems();
             this.grdv_data = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -62,18 +67,21 @@ namespace MIC.Equipos
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colImprimir = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnImprimir = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colAnularDiagnostico = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmdAnularDiagnostico = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.label8 = new System.Windows.Forms.Label();
             this.cmdSalir = new DevExpress.XtraEditors.SimpleButton();
             this.cmdRefresh = new DevExpress.XtraEditors.SimpleButton();
             this.cmdAgregarNuevo = new DevExpress.XtraEditors.SimpleButton();
-            this.colAnularDiagnostico = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.cmdAnularDiagnostico = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colUpdate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmdUpdateDiagnostico = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlDiagnosticos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdv_data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImprimir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAnularDiagnostico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdUpdateDiagnostico)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControlDiagnosticos
@@ -90,7 +98,8 @@ namespace MIC.Equipos
             this.gridControlDiagnosticos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnEditar,
             this.btnImprimir,
-            this.cmdAnularDiagnostico});
+            this.cmdAnularDiagnostico,
+            this.cmdUpdateDiagnostico});
             this.gridControlDiagnosticos.Size = new System.Drawing.Size(1108, 562);
             this.gridControlDiagnosticos.TabIndex = 8;
             this.gridControlDiagnosticos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -134,7 +143,8 @@ namespace MIC.Equipos
             this.colTecnico,
             this.gridColumn1,
             this.colImprimir,
-            this.colAnularDiagnostico});
+            this.colAnularDiagnostico,
+            this.colUpdate});
             this.grdv_data.GridControl = this.gridControlDiagnosticos;
             this.grdv_data.Name = "grdv_data";
             this.grdv_data.OptionsView.ShowAutoFilterRow = true;
@@ -262,6 +272,24 @@ namespace MIC.Equipos
             this.btnImprimir.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnImprimir.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.btnImprimir_ButtonClick);
             // 
+            // colAnularDiagnostico
+            // 
+            this.colAnularDiagnostico.Caption = "Deshabilitar Diagnostico";
+            this.colAnularDiagnostico.ColumnEdit = this.cmdAnularDiagnostico;
+            this.colAnularDiagnostico.Name = "colAnularDiagnostico";
+            this.colAnularDiagnostico.Visible = true;
+            this.colAnularDiagnostico.VisibleIndex = 8;
+            // 
+            // cmdAnularDiagnostico
+            // 
+            this.cmdAnularDiagnostico.AutoHeight = false;
+            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
+            this.cmdAnularDiagnostico.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.cmdAnularDiagnostico.Name = "cmdAnularDiagnostico";
+            this.cmdAnularDiagnostico.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.cmdAnularDiagnostico.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdAnularDiagnostico_ButtonClick);
+            // 
             // label8
             // 
             this.label8.AutoSize = true;
@@ -304,23 +332,23 @@ namespace MIC.Equipos
             this.cmdAgregarNuevo.Text = "Agregar";
             this.cmdAgregarNuevo.Click += new System.EventHandler(this.cmdAgregarNuevo_Click);
             // 
-            // colAnularDiagnostico
+            // colUpdate
             // 
-            this.colAnularDiagnostico.Caption = "Deshabilitar Diagnostico";
-            this.colAnularDiagnostico.ColumnEdit = this.cmdAnularDiagnostico;
-            this.colAnularDiagnostico.Name = "colAnularDiagnostico";
-            this.colAnularDiagnostico.Visible = true;
-            this.colAnularDiagnostico.VisibleIndex = 8;
+            this.colUpdate.Caption = "Editar";
+            this.colUpdate.ColumnEdit = this.cmdUpdateDiagnostico;
+            this.colUpdate.Name = "colUpdate";
+            this.colUpdate.Visible = true;
+            this.colUpdate.VisibleIndex = 9;
             // 
-            // cmdAnularDiagnostico
+            // cmdUpdateDiagnostico
             // 
-            this.cmdAnularDiagnostico.AutoHeight = false;
-            editorButtonImageOptions3.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions3.Image")));
-            this.cmdAnularDiagnostico.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions3, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject9, serializableAppearanceObject10, serializableAppearanceObject11, serializableAppearanceObject12, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.cmdAnularDiagnostico.Name = "cmdAnularDiagnostico";
-            this.cmdAnularDiagnostico.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.cmdAnularDiagnostico.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdAnularDiagnostico_ButtonClick);
+            this.cmdUpdateDiagnostico.AutoHeight = false;
+            editorButtonImageOptions4.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions4.Image")));
+            this.cmdUpdateDiagnostico.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions4, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject13, serializableAppearanceObject14, serializableAppearanceObject15, serializableAppearanceObject16, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            this.cmdUpdateDiagnostico.Name = "cmdUpdateDiagnostico";
+            this.cmdUpdateDiagnostico.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.cmdUpdateDiagnostico.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdUpdateDiagnostico_ButtonClick);
             // 
             // frmHomeDiagnosticos
             // 
@@ -341,6 +369,7 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnImprimir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdAnularDiagnostico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdUpdateDiagnostico)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -371,5 +400,7 @@ namespace MIC.Equipos
         private DevExpress.XtraEditors.SimpleButton cmdAgregarNuevo;
         private DevExpress.XtraGrid.Columns.GridColumn colAnularDiagnostico;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit cmdAnularDiagnostico;
+        private DevExpress.XtraGrid.Columns.GridColumn colUpdate;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit cmdUpdateDiagnostico;
     }
 }

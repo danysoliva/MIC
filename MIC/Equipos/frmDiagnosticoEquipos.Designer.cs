@@ -105,6 +105,7 @@ namespace MIC.Equipos
             this.grvAtributos = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colid1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtItemCode.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUser.Properties)).BeginInit();
             this.tabControl1.SuspendLayout();
@@ -671,7 +672,8 @@ namespace MIC.Equipos
             this.grvAtributos.Appearance.Row.Options.UseFont = true;
             this.grvAtributos.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn7,
-            this.gridColumn8});
+            this.gridColumn8,
+            this.colid1});
             this.grvAtributos.GridControl = this.gridControlAtributos1;
             this.grvAtributos.Name = "grvAtributos";
             this.grvAtributos.OptionsView.ShowAutoFilterRow = true;
@@ -694,6 +696,11 @@ namespace MIC.Equipos
             this.gridColumn8.OptionsColumn.ReadOnly = true;
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
+            // 
+            // colid1
+            // 
+            this.colid1.FieldName = "id";
+            this.colid1.Name = "colid1";
             // 
             // frmDiagnosticoEquipos
             // 
@@ -811,5 +818,6 @@ namespace MIC.Equipos
         private DevExpress.XtraGrid.Views.Grid.GridView grvAtributos;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
+        private DevExpress.XtraGrid.Columns.GridColumn colid1;
     }
 }
