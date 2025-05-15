@@ -157,7 +157,7 @@ namespace MIC.Equipos
             frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Update, row.idEquipo, row.id, UsuarioLogueado);
             if (frm.ShowDialog() == DialogResult.OK)
             {
-
+                CargarDiagnosticos();
             }
         }
     }

@@ -376,7 +376,7 @@ namespace MIC.Equipos
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Adjuntar Archivos";
+            this.gridColumn3.Caption = "Archivos Adjuntos";
             this.gridColumn3.ColumnEdit = this.cmdAdjuntarArchivos;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;

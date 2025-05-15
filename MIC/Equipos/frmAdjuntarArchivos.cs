@@ -167,24 +167,9 @@ namespace MIC.Equipos
                    
 
                     cmd.ExecuteNonQuery();
-                    //if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
-                    //{
-
-                    //    if (MessageBox.Show("Operacion Exitosa, Desea salir del formulario?", "Pregunta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
-                    //    {
-                    //        cn.Close();
-                    //        this.DialogResult = DialogResult.OK;
-                    //        this.Close();
-                    //    }
-                    //    else
-                    //    {
-                    //        cn.Close();
-
-                    //    }
-
-                    //}
-                    CajaDialogo.InformationAuto();
+                    
                     Upload(pathFile, fileName);
+                    CajaDialogo.InformationAuto();
                     LoadArchivosAdj();
                 }
                 catch (Exception ex)
@@ -212,7 +197,21 @@ namespace MIC.Equipos
                     DataOperations dp = new DataOperations();
 
                     FtpWebRequest request = (FtpWebRequest)WebRequest.Create(dp.FTP_MIC + fileName);//crear el archivo en el server
-                    request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass);
+
+                    string user_ = string.Empty;
+                    string pass_ = string.Empty;
+                    if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
+                    {
+                        user_ = "operador";
+                        pass_ = "Tempo1234";
+                    }
+                    else
+                    {
+                        user_ = UsuarioLogeado.ADuser1;
+                        pass_ = UsuarioLogeado.Pass;
+                    }
+
+                    request.Credentials = new NetworkCredential(user_, pass_);
                     request.Method = WebRequestMethods.Ftp.UploadFile;
 
                     using (Stream fileStream = File.OpenRead(pathFile))//del pc local la ruta
@@ -237,7 +236,7 @@ namespace MIC.Equipos
             {
                 string dir = @"C:\APMS_IT";
                 // If directory does not exist, create it
-                if (!Directory.Exists(dir))
+                if (!Directory.Exists(dir)) 
                 {
                     Directory.CreateDirectory(dir);
                 }

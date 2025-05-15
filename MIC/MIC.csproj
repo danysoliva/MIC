@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\aqfsvr010\deploy%24\MIC\</InstallUrl>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>39</ApplicationRevision>
+    <ApplicationRevision>40</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -274,12 +274,6 @@
     <Compile Include="Equipos\frmHomeDiagnosticos.Designer.cs">
       <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Equipos\frmHomeItems.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Equipos\frmHomeItems.Designer.cs">
-      <DependentUpon>frmHomeItems.cs</DependentUpon>
-    </Compile>
     <Compile Include="Equipos\frmHomeItems1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -442,9 +436,6 @@
     <EmbeddedResource Include="Equipos\frmHomeDiagnosticos.resx">
       <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Equipos\frmHomeItems.resx">
-      <DependentUpon>frmHomeItems.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Equipos\frmHomeItems1.resx">
       <DependentUpon>frmHomeItems1.cs</DependentUpon>
     </EmbeddedResource>
@@ -481,6 +472,7 @@
     <EmbeddedResource Include="Message\frmOpcionMotivo.resx">
       <DependentUpon>frmOpcionMotivo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

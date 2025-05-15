@@ -417,7 +417,7 @@ namespace MIC.Equipos
                         cmd.Parameters.AddWithValue("@diagnostico", rxtDiagnostico.Text);
                         cmd.Parameters.AddWithValue("@encargadoIT", UsuarioLogeado.Id);
                         cmd.Parameters.AddWithValue("@id_diagnostico", id_diagnos);
-                        
+                        cmd.ExecuteNonQuery();  
 
                         foreach (dsItems.detalleEquipoRow row in dsItems1.detalleEquipo.Rows)
                         {

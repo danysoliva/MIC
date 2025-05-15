@@ -63,9 +63,9 @@ namespace MIC
 
         private void nBitemsCRUDAtribuosEquipos_LinkClicked(object sender, DevExpress.XtraNavBar.NavBarLinkEventArgs e)
         {
-            frmHomeItems frm = new frmHomeItems(this.UsuarioLogeado);
-            frm.MdiParent = this;
-            frm.Show();
+            //frmHomeItems frm = new frmHomeItems(this.UsuarioLogeado);
+            //frm.MdiParent = this;
+            //frm.Show();
 
         }
 
