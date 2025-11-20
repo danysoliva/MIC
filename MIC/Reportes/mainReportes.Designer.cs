@@ -39,8 +39,9 @@ namespace MIC.Reportes
             this.colid = new DevExpress.XtraGrid.Columns.GridColumn();
             this.coldescripcion = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
             this.cmdGuardar = new DevExpress.XtraEditors.SimpleButton();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.grdReportes)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdluRpts.Properties)).BeginInit();
@@ -70,7 +71,7 @@ namespace MIC.Reportes
             // 
             // grdluRpts
             // 
-            this.grdluRpts.Location = new System.Drawing.Point(33, 42);
+            this.grdluRpts.Location = new System.Drawing.Point(20, 24);
             this.grdluRpts.Name = "grdluRpts";
             this.grdluRpts.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -118,6 +119,7 @@ namespace MIC.Reportes
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.simpleButton1);
             this.groupBox1.Controls.Add(this.cmdGuardar);
             this.groupBox1.Controls.Add(this.grdluRpts);
             this.groupBox1.Location = new System.Drawing.Point(3, 2);
@@ -127,14 +129,22 @@ namespace MIC.Reportes
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccion de Reporte";
             // 
-            // groupBox2
+            // simpleButton1
             // 
-            this.groupBox2.Location = new System.Drawing.Point(478, 2);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(617, 91);
-            this.groupBox2.TabIndex = 4;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Parametros";
+            this.simpleButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.LightBlue;
+            this.simpleButton1.Appearance.BorderColor = System.Drawing.Color.LightBlue;
+            this.simpleButton1.Appearance.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.simpleButton1.Appearance.Options.UseBackColor = true;
+            this.simpleButton1.Appearance.Options.UseBorderColor = true;
+            this.simpleButton1.Appearance.Options.UseFont = true;
+            this.simpleButton1.ImageOptions.Image = global::MIC.Properties.Resources.exporttoxlsx_32x32;
+            this.simpleButton1.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
+            this.simpleButton1.Location = new System.Drawing.Point(220, 50);
+            this.simpleButton1.Name = "simpleButton1";
+            this.simpleButton1.Size = new System.Drawing.Size(62, 35);
+            this.simpleButton1.TabIndex = 41;
+            this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
             // 
             // cmdGuardar
             // 
@@ -147,10 +157,22 @@ namespace MIC.Reportes
             this.cmdGuardar.Appearance.Options.UseFont = true;
             this.cmdGuardar.ImageOptions.Image = global::MIC.Properties.Resources.refresh_32x32;
             this.cmdGuardar.ImageOptions.ImageToTextAlignment = DevExpress.XtraEditors.ImageAlignToText.LeftCenter;
-            this.cmdGuardar.Location = new System.Drawing.Point(391, 29);
+            this.cmdGuardar.Location = new System.Drawing.Point(80, 50);
             this.cmdGuardar.Name = "cmdGuardar";
-            this.cmdGuardar.Size = new System.Drawing.Size(58, 41);
+            this.cmdGuardar.Size = new System.Drawing.Size(62, 35);
             this.cmdGuardar.TabIndex = 40;
+            this.cmdGuardar.Click += new System.EventHandler(this.cmdGuardar_Click);
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox2.Location = new System.Drawing.Point(478, 2);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(617, 91);
+            this.groupBox2.TabIndex = 4;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Parametros";
             // 
             // mainReportes
             // 
@@ -161,7 +183,6 @@ namespace MIC.Reportes
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.grdReportes);
             this.Name = "mainReportes";
-            this.Text = "mainReportes";
             ((System.ComponentModel.ISupportInitialize)(this.grdReportes)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdluRpts.Properties)).EndInit();
@@ -186,5 +207,6 @@ namespace MIC.Reportes
         private DevExpress.XtraGrid.Columns.GridColumn colid;
         private DevExpress.XtraGrid.Columns.GridColumn coldescripcion;
         private DevExpress.XtraEditors.SimpleButton cmdGuardar;
+        private DevExpress.XtraEditors.SimpleButton simpleButton1;
     }
 }

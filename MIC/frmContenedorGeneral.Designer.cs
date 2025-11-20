@@ -36,9 +36,10 @@
             this.gestiónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.equiposToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.diagnosticosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cerrarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -95,13 +96,6 @@
             this.diagnosticosToolStripMenuItem.Text = "Diagnosticos";
             this.diagnosticosToolStripMenuItem.Click += new System.EventHandler(this.diagnosticosToolStripMenuItem_Click);
             // 
-            // reportesToolStripMenuItem
-            // 
-            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
-            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.reportesToolStripMenuItem.Text = "Reportes";
-            this.reportesToolStripMenuItem.Visible = false;
-            // 
             // cerrarToolStripMenuItem
             // 
             this.cerrarToolStripMenuItem.Name = "cerrarToolStripMenuItem";
@@ -115,6 +109,21 @@
             this.salirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.salirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             this.salirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.salirDelSistemaToolStripMenuItem_Click);
+            // 
+            // reportesToolStripMenuItem
+            // 
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.reportesToolStripMenuItem1});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // reportesToolStripMenuItem1
+            // 
+            this.reportesToolStripMenuItem1.Name = "reportesToolStripMenuItem1";
+            this.reportesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.reportesToolStripMenuItem1.Text = "Reportes";
+            this.reportesToolStripMenuItem1.Click += new System.EventHandler(this.reportesToolStripMenuItem1_Click);
             // 
             // frmContenedorGeneral
             // 
@@ -149,6 +158,7 @@
         private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirDelSistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem1;
     }
 }
 

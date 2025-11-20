@@ -1,4 +1,7 @@
-﻿using DevExpress.XtraEditors;
+﻿using DevExpress.CodeParser;
+using DevExpress.Pdf.Native;
+using DevExpress.XtraEditors;
+using DevExpress.XtraGrid;
 using MIC.Clases;
 using System;
 using System.Collections.Generic;
@@ -51,8 +54,67 @@ namespace MIC.Reportes
         {
             switch (grdluRpts.EditValue)
             {
+                case 1:
+
+                    break;
                 default:
                     break;
+            }
+        }
+
+        private void cmdGuardar_Click(object sender, EventArgs e)
+        {
+            string query = "";
+            switch (grdluRpts.EditValue)
+            {
+                case 1:
+                    query = @"sp_rpt_computadoras_estados";
+                    break;
+
+                default:
+                    CajaDialogo.Error("Seleccione un reporte válido.");
+                    break;
+            }
+
+            DataOperations dp = new DataOperations();
+            using (SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO))
+            {
+                conn.Open();
+                using (SqlCommand cmd = new SqlCommand(query,conn))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+
+                    switch (grdluRpts.EditValue)
+                    {
+                        case 1:
+                            
+                            break;
+
+                        case 2:
+                            
+                            break;
+                    }
+
+
+                    DataTable tabla = new DataTable();
+                    using (SqlDataAdapter adat = new SqlDataAdapter(cmd))
+                    {
+                        adat.Fill(tabla);
+                        grdReportes.DataSource = tabla;
+                    }
+                }
+            }
+        }
+
+        private void simpleButton1_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog dialog = new SaveFileDialog();
+            dialog.Filter = "Excel File (.xlsx)|*.xlsx";
+            dialog.FilterIndex = 0;
+
+            if (dialog.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                grdReportes.ExportToXlsx(dialog.FileName);
             }
         }
     }

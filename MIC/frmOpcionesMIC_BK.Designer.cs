@@ -140,13 +140,14 @@
             this.navBarItem4.Caption = "REPORTES";
             this.navBarItem4.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("navBarItem4.ImageOptions.SvgImage")));
             this.navBarItem4.Name = "navBarItem4";
+            this.navBarItem4.LinkPressed += new DevExpress.XtraNavBar.NavBarLinkEventHandler(this.navBarItem4_LinkPressed);
             // 
             // navBarItem2
             // 
             this.navBarItem2.Caption = "HOME";
             this.navBarItem2.Name = "navBarItem2";
             // 
-            // Form1
+            // frmOpcionesMIC_BK
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -156,7 +157,7 @@
             this.Controls.Add(this.navBarControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.IsMdiContainer = true;
-            this.Name = "Form1";
+            this.Name = "frmOpcionesMIC_BK";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "MIC-Formularo Principal";
             this.TransparencyKey = System.Drawing.Color.White;
