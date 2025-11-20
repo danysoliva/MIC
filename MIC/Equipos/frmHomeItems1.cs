@@ -1,16 +1,19 @@
-﻿using System;
+﻿using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid;
+using DevExpress.XtraPrinting;
+using MIC.Clases;
+using MIC.Equipos;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MIC.Equipos;
-using MIC.Clases;
-using DevExpress.XtraGrid.Views.Grid;
 
 namespace MIC.Equipos
 {
@@ -343,13 +346,12 @@ namespace MIC.Equipos
         {
             var gridView = (GridView)gridControlHomeItems.FocusedView;
             var row = (dsItems.itemsRow)gridView.GetFocusedDataRow();
-            frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Nuevo, row.id,0, UsuarioLogeado);
-            if (frm.ShowDialog() == DialogResult.OK)
-            {
-                CargarItems(true);
-
-                
-            }
+            //frmDiagnosticoEquipos frm = new frmDiagnosticoEquipos(frmDiagnosticoEquipos.ComportamientoCRUD.Nuevo, row.id,0, UsuarioLogeado);
+            frmHomeDiagnosticos frm = new frmHomeDiagnosticos(UsuarioLogeado, row.id);
+            frm.WindowState = FormWindowState.Normal;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.MdiParent = this.MdiParent;
+            frm.Show();
         }
 
         private void simpleButton3_Click(object sender, EventArgs e)
@@ -367,6 +369,39 @@ namespace MIC.Equipos
         {
             frmDevolucionEquipo frm = new frmDevolucionEquipo(this.UsuarioLogeado);
             frm.Show();
+        }
+
+        private void cmdExcel_Click(object sender, EventArgs e)
+        {
+
+            //Nueva version
+            try
+            {
+                SaveFileDialog dialog = new SaveFileDialog();
+                dialog.Filter = "Excel File (.xlsx)|*.xlsx";
+                dialog.FilterIndex = 0;
+                string path = "Detalle Equipos MIC";//My Item Check
+
+                if (dialog.ShowDialog() == DialogResult.OK)
+                {
+                    path = dialog.FileName;
+                    //Customize export options
+                    (gridControlHomeItems.MainView as GridView).OptionsPrint.PrintHeader = true;
+                    XlsxExportOptionsEx advOptions = new XlsxExportOptionsEx();
+                    advOptions.AllowGrouping = DevExpress.Utils.DefaultBoolean.False;
+                    advOptions.ShowTotalSummaries = DevExpress.Utils.DefaultBoolean.False;
+                    advOptions.SheetName = "Exported from MIC";
+
+                    gridControlHomeItems.ExportToXlsx(path, advOptions);
+                    // Open the created XLSX file with the default application.
+                    Process.Start(path);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
         }
     }
  }

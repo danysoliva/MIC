@@ -81,8 +81,6 @@ namespace MIC.Reportes
                 dsReportes1.archivos.Clear();
                 da.Fill(dsReportes1.archivos);
                 cn.Close();
-
-
             }
             catch (Exception ex)
             {

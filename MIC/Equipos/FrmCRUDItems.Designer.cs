@@ -268,10 +268,11 @@
             // 
             // cmdCerrar
             // 
+            this.cmdCerrar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmdCerrar.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdCerrar.Appearance.Options.UseFont = true;
             this.cmdCerrar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdCerrar.ImageOptions.Image")));
-            this.cmdCerrar.Location = new System.Drawing.Point(293, 648);
+            this.cmdCerrar.Location = new System.Drawing.Point(298, 675);
             this.cmdCerrar.Name = "cmdCerrar";
             this.cmdCerrar.Size = new System.Drawing.Size(104, 46);
             this.cmdCerrar.TabIndex = 9;
@@ -280,10 +281,11 @@
             // 
             // cmdRegistrarItem
             // 
+            this.cmdRegistrarItem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.cmdRegistrarItem.Appearance.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmdRegistrarItem.Appearance.Options.UseFont = true;
             this.cmdRegistrarItem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdRegistrarItem.ImageOptions.Image")));
-            this.cmdRegistrarItem.Location = new System.Drawing.Point(184, 648);
+            this.cmdRegistrarItem.Location = new System.Drawing.Point(189, 675);
             this.cmdRegistrarItem.Name = "cmdRegistrarItem";
             this.cmdRegistrarItem.Size = new System.Drawing.Size(104, 46);
             this.cmdRegistrarItem.TabIndex = 8;
@@ -399,6 +401,9 @@
             // 
             // gridControlAtributos
             // 
+            this.gridControlAtributos.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.gridControlAtributos.DataMember = "AtributosEquipo";
             this.gridControlAtributos.DataSource = this.dsItems1;
             this.gridControlAtributos.Location = new System.Drawing.Point(1, 270);
@@ -406,7 +411,7 @@
             this.gridControlAtributos.Name = "gridControlAtributos";
             this.gridControlAtributos.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnAgregar});
-            this.gridControlAtributos.Size = new System.Drawing.Size(600, 346);
+            this.gridControlAtributos.Size = new System.Drawing.Size(600, 399);
             this.gridControlAtributos.TabIndex = 28;
             this.gridControlAtributos.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.grdv_atributos});

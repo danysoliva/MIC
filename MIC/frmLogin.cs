@@ -151,18 +151,18 @@ namespace MIC
                 {
                     IdUser = 1035;
                 }
-                else if (HostName == "9SSCBV2")
-                {
-                    IdUser = 1137;
-                }
-                else if (HostName == "6G1SST3")
-                {
-                    IdUser = 1058;
-                }
-                else
-                {
-                    IdUser = 1104;
-                }
+                //else if (HostName == "9SSCBV2")
+                //{
+                //    IdUser = 1137;
+                //}
+                //else if (HostName == "6G1SST3")
+                //{
+                //    IdUser = 1058;
+                //}
+                //else
+                //{
+                //    IdUser = 1104;
+                //}
             }
             else
             {

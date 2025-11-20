@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\aqfsvr010\deploy%24\MIC\</InstallUrl>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>34</ApplicationRevision>
+    <ApplicationRevision>41</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -97,7 +97,8 @@
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
   <PropertyGroup>
-    <AssemblyOriginatorKeyFile>MIC_2025.snk</AssemblyOriginatorKeyFile>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Charts.v23.2.Core, Version=23.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
@@ -273,12 +274,6 @@
     <Compile Include="Equipos\frmHomeDiagnosticos.Designer.cs">
       <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Equipos\frmHomeItems.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Equipos\frmHomeItems.Designer.cs">
-      <DependentUpon>frmHomeItems.cs</DependentUpon>
-    </Compile>
     <Compile Include="Equipos\frmHomeItems1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -441,9 +436,6 @@
     <EmbeddedResource Include="Equipos\frmHomeDiagnosticos.resx">
       <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Equipos\frmHomeItems.resx">
-      <DependentUpon>frmHomeItems.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Equipos\frmHomeItems1.resx">
       <DependentUpon>frmHomeItems1.cs</DependentUpon>
     </EmbeddedResource>
@@ -546,7 +538,6 @@
     <None Include="MICDataSet.xss">
       <DependentUpon>MICDataSet.xsd</DependentUpon>
     </None>
-    <None Include="MIC_2025.snk" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -587,12 +578,12 @@
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
       <Visible>False</Visible>
-      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
@@ -604,7 +595,6 @@
   <ItemGroup>
     <Content Include="construction_engineering_protection_hold_hand_cog_technology_icon_153207.ico" />
     <Content Include="iconoMIC.ico" />
-    <None Include="Resources\refresh_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
