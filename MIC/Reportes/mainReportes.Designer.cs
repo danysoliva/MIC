@@ -68,6 +68,7 @@ namespace MIC.Reportes
             // 
             this.gridView1.GridControl = this.grdReportes;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.ReadOnly = true;
             // 
             // grdluRpts
             // 
