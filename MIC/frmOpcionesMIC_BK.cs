@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MIC.Clases;
 using MIC.Equipos;
 using DevExpress.XtraNavBar;
+using MIC.Reportes;
 
 namespace MIC
 {
@@ -94,6 +95,14 @@ namespace MIC
         private void navBarItem3_LinkClicked(object sender, NavBarLinkEventArgs e)
         {
             frmHomeDiagnosticos frm = new frmHomeDiagnosticos(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.Show();
+        }
+
+        private void navBarItem4_LinkPressed(object sender, NavBarLinkEventArgs e)
+        {
+
+            mainReportes frm = new mainReportes();
             frm.MdiParent = this;
             frm.Show();
         }

@@ -1,5 +1,6 @@
 ﻿using MIC.Clases;
 using MIC.Equipos;
+using MIC.Reportes;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,6 +84,14 @@ namespace MIC
             frm.MdiParent = this;
             frm.StartPosition = FormStartPosition.CenterParent;
             frm.WindowState = FormWindowState.Normal;
+            frm.Show();
+        }
+
+        private void reportesToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+            mainReportes frm = new mainReportes();
+            frm.MdiParent = this;
             frm.Show();
         }
     }

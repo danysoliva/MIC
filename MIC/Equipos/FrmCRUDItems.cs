@@ -123,6 +123,7 @@ namespace MIC.Equipos
                 case ComportamientoCRUD.Insert:
                      
                     Guardar = false;
+                    gleIdEstado.EditValue = 3;
                     break;
 
                 case ComportamientoCRUD.Update:
@@ -398,7 +399,13 @@ namespace MIC.Equipos
                             cmd.Parameters.AddWithValue("@marca", txtMarca.Text);
                             cmd.Parameters.AddWithValue("@comentario", txtComentario.Text);
                             cmd.Parameters.AddWithValue("@bit_asignable", tggBitAsignable.IsOn);
-                            cmd.Parameters.AddWithValue("@id_estado", gleIdEstado.EditValue);
+                            if (Convert.ToInt32(gleIdEstado.EditValue) > 0)
+                            {
+                                cmd.Parameters.AddWithValue("@id_estado", gleIdEstado.EditValue);
+                            }
+                            else
+                                cmd.Parameters.AddWithValue("@id_estado", 3);
+                            
                             cmd.Parameters.AddWithValue("@multiusuario", tggBitMultiusuario.IsOn);
                             cmd.Parameters.AddWithValue("@estado_equipo", gleEstadoEquipo.EditValue);
 

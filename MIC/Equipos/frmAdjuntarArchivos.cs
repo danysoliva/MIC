@@ -22,6 +22,8 @@ namespace MIC.Equipos
         DataOperations dp = new DataOperations();
         int id_item;
         int id_user;
+        string user_ = "ftpuser";
+        string pass_ = "Ftp@Server2025#Usr";
         public frmAdjuntarArchivos()
         {
             InitializeComponent();
@@ -77,21 +79,21 @@ namespace MIC.Equipos
 
                 FtpWebRequest request = (FtpWebRequest)WebRequest.Create(pathSource);
                 //request.Credentials = new NetworkCredential(dp.User_FTP_Server, dp.Password_UserFTPServer);
-                string user_ = string.Empty;
-                string pass_ = string.Empty;
-                if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
-                {
-                    user_ = "operador";
-                    pass_ = "Tempo1234";
-                }
-                else
-                {
-                    user_ = UsuarioLogeado.ADuser1;
-                    pass_ = UsuarioLogeado.Pass;
-                }
+                //string user_ = string.Empty;
+                //string pass_ = string.Empty;
+                //if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
+                //{
+                //    user_ = "operador";
+                //    pass_ = "Tempo1234";
+                //}
+                //else
+                //{
+                //    user_ = UsuarioLogeado.ADuser1;
+                //    pass_ = UsuarioLogeado.Pass;
+                //}
 
                 //request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass, "AQUAFEEDHN.COM");
-                request.Credentials = new NetworkCredential(user_, pass_, "AQUAFEEDHN.COM");
+                request.Credentials = new NetworkCredential(user_, pass_);
                 request.Method = WebRequestMethods.Ftp.DownloadFile;
 
                 using (Stream ftpStream = request.GetResponse().GetResponseStream())
@@ -117,7 +119,7 @@ namespace MIC.Equipos
                 DataOperations dp = new DataOperations();
 
                 FtpWebRequest request = (FtpWebRequest)WebRequest.Create(pathSource);
-                request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass);
+                request.Credentials = new NetworkCredential(user_, pass_);
                 //request.Credentials = new NetworkCredential(UsuarioLogeado.AD_User, UsuarioLogeado.Password);
                 request.Method = WebRequestMethods.Ftp.DownloadFile;
 
@@ -198,18 +200,19 @@ namespace MIC.Equipos
 
                     FtpWebRequest request = (FtpWebRequest)WebRequest.Create(dp.FTP_MIC + fileName);//crear el archivo en el server
 
-                    string user_ = string.Empty;
-                    string pass_ = string.Empty;
-                    if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
-                    {
-                        user_ = "operador";
-                        pass_ = "Tempo1234";
-                    }
-                    else
-                    {
-                        user_ = UsuarioLogeado.ADuser1;
-                        pass_ = UsuarioLogeado.Pass;
-                    }
+               
+
+                    
+                    //if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
+                    //{
+                    //    user_ = "operador";
+                    //    pass_ = "Tempo1234";
+                    //}
+                    //else
+                    //{
+                    //    user_ = UsuarioLogeado.ADuser1;
+                    //    pass_ = UsuarioLogeado.Pass;
+                    //}
 
                     request.Credentials = new NetworkCredential(user_, pass_);
                     request.Method = WebRequestMethods.Ftp.UploadFile;

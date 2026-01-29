@@ -658,19 +658,22 @@ namespace MIC.Equipos
 
                     FtpWebRequest request = (FtpWebRequest)WebRequest.Create(dp.FTP_MIC_DIAG + fileName);//crear el archivo en el server
 
-                    string user_ = string.Empty; 
-                    string passwd = string.Empty;
+                    //UserFTP = "ftpuser";
+                    //PassFTP = "Ftp@Server2025#Usr";
 
-                    if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
-                    {
-                        user_ = "operador";
-                        passwd = "Tempo1234";
-                    }
-                    else
-                    {
-                        user_ = UsuarioLogeado.ADuser1;
-                        passwd = UsuarioLogeado.Pass;
-                    }
+                    string user_ = "ftpuser";
+                    string passwd = "Ftp@Server2025#Usr";
+
+                    //if (string.IsNullOrEmpty(UsuarioLogeado.Pass))
+                    //{
+                    //    user_ = "operador";
+                    //    passwd = "Tempo1234";
+                    //}
+                    //else
+                    //{
+                    //    user_ = UsuarioLogeado.ADuser1;
+                    //    passwd = UsuarioLogeado.Pass;
+                    //}
 
                     //request.Credentials = new NetworkCredential(UsuarioLogeado.ADuser1, UsuarioLogeado.Pass);
                     request.Credentials = new NetworkCredential(user_, passwd);

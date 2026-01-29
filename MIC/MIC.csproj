@@ -595,6 +595,7 @@
   <ItemGroup>
     <Content Include="construction_engineering_protection_hold_hand_cog_technology_icon_153207.ico" />
     <Content Include="iconoMIC.ico" />
+    <None Include="Resources\exporttoxlsx_32x32.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
