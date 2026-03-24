@@ -100,6 +100,7 @@ namespace MIC.Equipos
             this.btnAtributosEquipo = new DevExpress.XtraEditors.SimpleButton();
             this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
             this.cmdExcel = new DevExpress.XtraEditors.SimpleButton();
+            this.cmdActualizar = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tggVerTodos.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlHomeItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).BeginInit();
@@ -492,7 +493,7 @@ namespace MIC.Equipos
             this.simpleButton1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
             this.simpleButton1.Location = new System.Drawing.Point(103, 38);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(141, 34);
+            this.simpleButton1.Size = new System.Drawing.Size(124, 34);
             this.simpleButton1.TabIndex = 31;
             this.simpleButton1.Text = "TIPO DE EQUIPO";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -500,7 +501,7 @@ namespace MIC.Equipos
             // simpleButton2
             // 
             this.simpleButton2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.ImageOptions.Image")));
-            this.simpleButton2.Location = new System.Drawing.Point(397, 38);
+            this.simpleButton2.Location = new System.Drawing.Point(378, 38);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(116, 34);
             this.simpleButton2.TabIndex = 32;
@@ -510,9 +511,9 @@ namespace MIC.Equipos
             // btnAtributosEquipo
             // 
             this.btnAtributosEquipo.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnAtributosEquipo.ImageOptions.Image")));
-            this.btnAtributosEquipo.Location = new System.Drawing.Point(250, 38);
+            this.btnAtributosEquipo.Location = new System.Drawing.Point(233, 38);
             this.btnAtributosEquipo.Name = "btnAtributosEquipo";
-            this.btnAtributosEquipo.Size = new System.Drawing.Size(141, 34);
+            this.btnAtributosEquipo.Size = new System.Drawing.Size(139, 34);
             this.btnAtributosEquipo.TabIndex = 33;
             this.btnAtributosEquipo.Text = "ATRIBUTOS EQUIPO";
             this.btnAtributosEquipo.Click += new System.EventHandler(this.simpleButton3_Click);
@@ -520,7 +521,7 @@ namespace MIC.Equipos
             // simpleButton3
             // 
             this.simpleButton3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.ImageOptions.Image")));
-            this.simpleButton3.Location = new System.Drawing.Point(519, 38);
+            this.simpleButton3.Location = new System.Drawing.Point(500, 38);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(119, 34);
             this.simpleButton3.TabIndex = 34;
@@ -529,19 +530,30 @@ namespace MIC.Equipos
             // 
             // cmdExcel
             // 
-            this.cmdExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
-            this.cmdExcel.Location = new System.Drawing.Point(644, 38);
+            this.cmdExcel.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("cmdExcel.ImageOptions.Image")));
+            this.cmdExcel.Location = new System.Drawing.Point(625, 38);
             this.cmdExcel.Name = "cmdExcel";
-            this.cmdExcel.Size = new System.Drawing.Size(119, 34);
+            this.cmdExcel.Size = new System.Drawing.Size(77, 34);
             this.cmdExcel.TabIndex = 35;
             this.cmdExcel.Text = "EXCEL";
             this.cmdExcel.Click += new System.EventHandler(this.cmdExcel_Click);
+            // 
+            // cmdActualizar
+            // 
+            this.cmdActualizar.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.ImageOptions.Image")));
+            this.cmdActualizar.Location = new System.Drawing.Point(708, 38);
+            this.cmdActualizar.Name = "cmdActualizar";
+            this.cmdActualizar.Size = new System.Drawing.Size(98, 34);
+            this.cmdActualizar.TabIndex = 36;
+            this.cmdActualizar.Text = "Actualizar";
+            this.cmdActualizar.Click += new System.EventHandler(this.cmdActualizar_Click);
             // 
             // frmFindAtributos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1145, 643);
+            this.Controls.Add(this.cmdActualizar);
             this.Controls.Add(this.cmdExcel);
             this.Controls.Add(this.simpleButton3);
             this.Controls.Add(this.btnAtributosEquipo);
@@ -617,5 +629,6 @@ namespace MIC.Equipos
         private DevExpress.XtraEditors.SimpleButton btnAtributosEquipo;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton cmdExcel;
+        private DevExpress.XtraEditors.SimpleButton cmdActualizar;
     }
 }

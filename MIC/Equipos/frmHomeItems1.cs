@@ -403,5 +403,10 @@ namespace MIC.Equipos
                 CajaDialogo.Error(ex.Message);
             }
         }
+
+        private void cmdActualizar_Click(object sender, EventArgs e)
+        {
+            CargarItems(tggVerTodos.IsOn);
+        }
     }
  }
