@@ -30,8 +30,8 @@ namespace MIC.Clases
                                                    Password=" + Globals.CTS_DB_Pass + ";";
 
         public string FTP_APMS_IT { get; internal set; }
-        internal string FTP_MIC = @"ftp://10.50.11.32/MIC/ADJUNTOS/";
-        internal string FTP_MIC_DIAG = @"ftp://10.50.11.32/MIC/DIAGNOSTICOS/";
+        internal string FTP_MIC = @"ftp://10.50.11.26/MIC/ADJUNTOS/";
+        internal string FTP_MIC_DIAG = @"ftp://10.50.11.26/MIC/DIAGNOSTICOS/";
         #endregion
 
         public decimal ValidateNumberDecimal(object val)
