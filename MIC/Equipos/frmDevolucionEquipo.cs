@@ -44,7 +44,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("dbo.sp_get_items_by_user", connection);
@@ -87,7 +87,7 @@ namespace MIC.Equipos
                         try { 
                         
                             string Query = @"sp_update_mic_asignaciones_item";
-                            SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                            SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                             cn.Open();
                             SqlCommand cmd = new SqlCommand(Query, cn);
                             cmd.CommandType = CommandType.StoredProcedure;

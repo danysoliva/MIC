@@ -32,7 +32,7 @@ namespace MIC.Reportes
             string Query = @"sp_load_user_data";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -55,7 +55,7 @@ namespace MIC.Reportes
             string Query = @"sp_get_mic_items_devueltos";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;

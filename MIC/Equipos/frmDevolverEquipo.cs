@@ -18,10 +18,6 @@ namespace MIC.Equipos
     public partial class frmDevolverEquipo : DevExpress.XtraEditors.XtraForm
     {
 
-        public frmDevolverEquipo()
-        {
-            InitializeComponent();
-        }
         int id_item;
         DataOperations dp = new DataOperations();
         public frmDevolverEquipo(string pEquipo, string pCodigo, int pId_Item)
@@ -32,14 +28,38 @@ namespace MIC.Equipos
             txtItemCode.Text = pCodigo;
             id_item = pId_Item;
             CargarUsersByItem();
-
+            CargarTipoDevoluciones();
         }
+
+        private void CargarTipoDevoluciones()
+        {
+            try
+            {
+                DataOperations dp = new DataOperations();
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
+                connection.Open();
+
+                SqlCommand command = new SqlCommand("sp_get_lista_tipos_devolucion_item", connection);
+                command.CommandType = CommandType.StoredProcedure;
+                //command.Parameters.AddWithValue("@id_item", id_item);
+                SqlDataAdapter adapter = new SqlDataAdapter(command);
+
+                dsItems1.devolucion_tipos.Clear();
+                adapter.Fill(dsItems1.devolucion_tipos);
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error("Error:" + ex.Message);
+            }
+        }
+
         private void CargarUsersByItem()
         {
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("sp_get_users_by_item", connection);
@@ -59,8 +79,7 @@ namespace MIC.Equipos
 
         private void cmdDevolver_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
-
-            if (string.IsNullOrEmpty(gleMotivo.Text))
+            if (string.IsNullOrEmpty(gleMotivoList.Text))
             {
                 CajaDialogo.Error("Debe Seleccionar un Motivo");
                 return;
@@ -72,18 +91,20 @@ namespace MIC.Equipos
             {
                 try
                 {
-                    string Query = @"sp_update_mic_asignaciones_item";
-                    SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                    //string Query = @"sp_update_mic_asignaciones_item";
+                    string Query = @"[sp_update_mic_asignaciones_item_v2]";
+
+                    SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                     cn.Open();
                     SqlCommand cmd = new SqlCommand(Query, cn);
                     cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@id_item", id_item);
                     cmd.Parameters.AddWithValue("@id_user", row.id);
-                    cmd.Parameters.AddWithValue("@motivo", gleMotivo.Text);
-                    try
+                    cmd.Parameters.AddWithValue("@motivo", gleMotivoList.Text);
+                    cmd.Parameters.AddWithValue("@id_tipo", gleMotivoList.EditValue);
+
+                    if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
                     {
-
-
                         SqlCommand command = new SqlCommand("sp_setUpdateItems_byState", cn);
                         command.CommandType = CommandType.StoredProcedure;
 
@@ -91,17 +112,6 @@ namespace MIC.Equipos
                         command.Parameters.AddWithValue("@id_estado", 3);
                         command.ExecuteNonQuery();
 
-                    }
-                    catch (Exception ex)
-                    {
-                        CajaDialogo.Error("Error: " + ex.Message);
-
-                    }
-
-                    if (Convert.ToInt32(cmd.ExecuteScalar()) == 1)
-
-
-                    {
                         if (MessageBox.Show("Operacion Exitosa, Desea salir del formulario?", "Pregunta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
                         {
                             cn.Close();
@@ -117,11 +127,8 @@ namespace MIC.Equipos
                             cn.Close();
                             CargarUsersByItem();
                         }
-
                     }
                     cn.Close();
-
-
                 }
                 catch (Exception ex)
                 {

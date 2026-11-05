@@ -28,7 +28,7 @@ namespace MIC.Reportes
             string Query = @"mic_reporte_asignacion_celular";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;

@@ -46,7 +46,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command;
@@ -127,7 +127,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command;

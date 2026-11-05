@@ -56,7 +56,7 @@ namespace MIC.Clases
             Recuperado = false;
 
             DataOperations dp = new DataOperations();
-            SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
             connection.Open();
 
             string query = @"dbo.sp_get_mic_items_from_id";
@@ -115,7 +115,7 @@ namespace MIC.Clases
         public bool InsertRowItems() //Funcion de Insertar
         {
             DataOperations dp = new DataOperations();
-            SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
 
             try
             {
@@ -148,7 +148,7 @@ namespace MIC.Clases
         public bool UpdateRowItems()
         {
             DataOperations dp = new DataOperations();
-            SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
 
             try
             {

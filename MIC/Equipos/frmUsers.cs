@@ -41,7 +41,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("sp_get_users_by_item", connection);
@@ -61,7 +61,7 @@ namespace MIC.Equipos
 
         private void ValidarExistencia(int pId_User)
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_check_users_by_item", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -156,7 +156,7 @@ namespace MIC.Equipos
                                     return;
 
                                 string Query = @"sp_setInsertNewUserItem";
-                                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                                 try
                                 {
                 

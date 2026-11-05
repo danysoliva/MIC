@@ -54,7 +54,7 @@ namespace MIC.Equipos
 
                 DataOperations dp = new DataOperations();
 
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = CommandType.StoredProcedure;

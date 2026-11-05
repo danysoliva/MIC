@@ -44,7 +44,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand("sp_mic_get_archivos_subidos_by_item", conn);
@@ -62,7 +62,7 @@ namespace MIC.Equipos
         }
         public void CargarIdUser()
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_get_one_user_by_item", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -158,7 +158,7 @@ namespace MIC.Equipos
                 {
                    
                     string Query = @"sp_setInsertNewArchivoAdjunto";
-                    SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                    SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                     cn.Open();
                     SqlCommand cmd = new SqlCommand(Query, cn);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -287,7 +287,7 @@ namespace MIC.Equipos
             DialogResult r = CajaDialogo.Pregunta("Se eliminara el archivo de forma permanente! esta seguro?");
             if (r == DialogResult.Yes)
             {
-                SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
                 conn.Open();
                 try
                 { 

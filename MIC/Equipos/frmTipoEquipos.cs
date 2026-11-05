@@ -48,7 +48,7 @@ namespace MIC.Equipos
                     Query = @"sp_it_load_config_atributos";
                     try
                     {
-                        SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                        SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                         cn.Open();
                         SqlCommand cmd = new SqlCommand(Query, cn);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -69,7 +69,7 @@ namespace MIC.Equipos
                     Query = @"sp_it_load_config_atributos";
                     try
                     {
-                        SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                        SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                         cn.Open();
                         SqlCommand cmd = new SqlCommand(Query, cn);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -157,7 +157,7 @@ namespace MIC.Equipos
            
             DataOperations dp = new DataOperations();
             SqlTransaction transaction = null;
-            SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
             bool Guardar = false;
             
             bool habilitado = true;

@@ -101,7 +101,7 @@ namespace MIC
                     try
                     {
                         //Guardar Log de Inicio de Sesion
-                        SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
+                        SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
                         conn.Open();
                         SqlCommand cmd = new SqlCommand("sp_insert_login_user_mic", conn);
                         cmd.CommandType = CommandType.StoredProcedure;

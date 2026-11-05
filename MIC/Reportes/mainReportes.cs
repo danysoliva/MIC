@@ -29,7 +29,7 @@ namespace MIC.Reportes
             try
             {
                 DataOperations dp = new DataOperations();
-                using (SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO))
+                using (SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC))
                 using (SqlCommand cmd = new SqlCommand("sp_get_reports", conn))
                 {
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -77,7 +77,7 @@ namespace MIC.Reportes
             }
 
             DataOperations dp = new DataOperations();
-            using (SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO))
+            using (SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC))
             {
                 conn.Open();
                 using (SqlCommand cmd = new SqlCommand(query,conn))

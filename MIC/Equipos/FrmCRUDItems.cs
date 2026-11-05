@@ -83,7 +83,7 @@ namespace MIC.Equipos
                     Query = @"sp_get_mic_config_atributos_equipos";
                     try
                     {
-                        SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                        SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                         cn.Open();
                         SqlCommand cmd = new SqlCommand(Query, cn);
                         cmd.CommandType = CommandType.StoredProcedure;
@@ -159,7 +159,7 @@ namespace MIC.Equipos
         }
         public void CargarIdSiguiente()
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_get_id_siguiente_fromid", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -169,7 +169,7 @@ namespace MIC.Equipos
         }
         public void CargarCodigo()
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_get_itemcode_tablesID", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -184,7 +184,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("dbo.sp_get_mic_estados_equipos", connection);
@@ -207,7 +207,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("dbo.sp_get_mic_estados", connection);
@@ -230,7 +230,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("dbo.sp_it_load_config_atributos_TipoEquipo", connection);
@@ -254,7 +254,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("dbo.sp_get_mic_tipo_equipo", connection);
@@ -338,7 +338,7 @@ namespace MIC.Equipos
             
             DataOperations dp = new DataOperations();
             SqlTransaction transaction = null;
-            SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
             gleIdEstado.EditValue = 3;
             if (string.IsNullOrEmpty(gleEstadoEquipo.Text))
             {

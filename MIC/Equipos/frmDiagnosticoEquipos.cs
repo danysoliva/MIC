@@ -174,7 +174,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
                 conn.Open();
 
                 SqlCommand cmd = new SqlCommand("sp_mic_get_archivos_subidos_by_diagnostico", conn);
@@ -196,7 +196,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("sp_it_load_detalle_atributos_diagnosticos", connection);
@@ -218,7 +218,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("sp_get_user_by_item", connection);
@@ -238,7 +238,7 @@ namespace MIC.Equipos
 
         public void CargarUser()
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_get_user_by_item", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -253,7 +253,7 @@ namespace MIC.Equipos
         }
         public void CargarUbicacion()
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_get_mic_ubicacion_esp_from_id", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -264,7 +264,7 @@ namespace MIC.Equipos
         }
         public void CargarUbicacionGeneral()
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_get_mic_ubicacion_from_id", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -278,7 +278,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("sp_get_mic_tipo_equipo", connection);
@@ -300,7 +300,7 @@ namespace MIC.Equipos
             string Query = @"mic_report_atributos_equipos_diagnostico";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -338,7 +338,7 @@ namespace MIC.Equipos
                 return;
 
 
-            SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
             try
             {
 

@@ -34,7 +34,7 @@ namespace MIC.Clases
             Recuperado = false;
 
             DataOperations dp = new DataOperations();
-            SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
             connection.Open();
 
             string query = @"dbo.sp_get_mic_tablesID_from_id";

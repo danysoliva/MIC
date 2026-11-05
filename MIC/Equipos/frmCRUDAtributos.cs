@@ -25,7 +25,7 @@ namespace MIC.Equipos
         public Atributo AtributoActual;
         public void CargarOrderForce()
         {
-            SqlConnection con = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection con = new SqlConnection(dp.ConnectionStringMIC);
             con.Open();
             SqlCommand cmm = new SqlCommand("sp_load_order_force", con);
             cmm.CommandType = CommandType.StoredProcedure;
@@ -83,7 +83,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("dbo.sp_get_mic_tipos_datos", connection);

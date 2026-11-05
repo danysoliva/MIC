@@ -12,7 +12,7 @@ namespace MIC.Clases
 
             #region Connection Credentials
 
-            public string ConnectionStringDEMO = @"Server=" + Globals.CONN_Server + @";
+            public string ConnectionStringMIC = @"Server=" + Globals.CONN_Server + @";
                                                    Database=" + Globals.CONN_ActiveDB + @";
                                                    User Id=" + Globals.CONN_DB_User + @";
                                                    Password=" + Globals.CONN_DB_Pass + ";";

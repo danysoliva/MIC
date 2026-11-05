@@ -32,7 +32,7 @@ namespace MIC.Equipos
             string Query = @"sp_get_all_mic_ubicaciones";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -53,7 +53,7 @@ namespace MIC.Equipos
             try
             {
                 
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = CommandType.StoredProcedure;

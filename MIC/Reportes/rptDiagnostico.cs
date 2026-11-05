@@ -27,7 +27,7 @@ namespace MIC.Reportes
             string Query = @"mic_report_diagnostico_equipos";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -50,7 +50,7 @@ namespace MIC.Reportes
             string Query = @"mic_report_atributos_equipos_diagnostico_v1";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
@@ -72,7 +72,7 @@ namespace MIC.Reportes
             string Query = @"mic_report_archivos_diagnosticos";
             try
             {
-                SqlConnection cn = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                 cn.Open();
                 SqlCommand cmd = new SqlCommand(Query, cn);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;

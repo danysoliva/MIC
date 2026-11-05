@@ -58,7 +58,7 @@ namespace MIC.Equipos
             try
             {
                 DataOperations dp = new DataOperations();
-                SqlConnection connection = new SqlConnection(dp.ConnectionStringDEMO);
+                SqlConnection connection = new SqlConnection(dp.ConnectionStringMIC);
                 connection.Open();
 
                 SqlCommand command = new SqlCommand("sp_get_mic_ubicaciones_esp_from_id", connection);
@@ -101,7 +101,7 @@ namespace MIC.Equipos
         {
             DataOperations dp = new DataOperations();
             SqlTransaction transaction = null;
-            SqlConnection conn = new SqlConnection(dp.ConnectionStringDEMO);
+            SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
             bool Guardar = false;
             bool habilitado = true;
 
