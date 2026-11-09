@@ -94,5 +94,21 @@ namespace MIC
             frm.MdiParent = this;
             frm.Show();
         }
+
+        private void devolucionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            //Devoluciones
+            if (UsuarioLogeado == null)
+            {
+                CajaDialogo.Error("Es necesario iniciar sesión!");
+                return;
+            }
+
+            frmListaDevolucionesHome frm = new frmListaDevolucionesHome(this.UsuarioLogeado);
+            frm.MdiParent = this;
+            frm.StartPosition = FormStartPosition.CenterParent;
+            frm.WindowState = FormWindowState.Normal;
+            frm.Show();
+        }
     }
 }

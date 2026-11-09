@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\aqfsvr010\deploy%24\MIC\</InstallUrl>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>46</ApplicationRevision>
+    <ApplicationRevision>48</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -231,6 +231,12 @@
     <Compile Include="Equipos\FrmCRUDItems.Designer.cs">
       <DependentUpon>FrmCRUDItems.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipos\frmListaDevolucionesHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmListaDevolucionesHome.Designer.cs">
+      <DependentUpon>frmListaDevolucionesHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Equipos\frmDevolucionEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -416,6 +422,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Equipos\frmDevolucionEquipo.resx">
       <DependentUpon>frmDevolucionEquipo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmListaDevolucionesHome.resx">
+      <DependentUpon>frmListaDevolucionesHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Equipos\frmDevolverEquipo.resx">
       <DependentUpon>frmDevolverEquipo.cs</DependentUpon>

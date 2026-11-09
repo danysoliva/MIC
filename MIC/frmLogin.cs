@@ -144,25 +144,30 @@ namespace MIC
         private void frmLogin_Load(object sender, EventArgs e)
         {
             string HostName = Dns.GetHostName();
-            if (HostName == "7L12TV3" /*Danys Oliva*/ || HostName == "9SSCBV2" /*Ever Erazo*/|| HostName == "6G1SST3" /*Ruben Garcia */ || HostName == "F9Q11Q2")
+            if (HostName == "7L12TV3" /*Danys Oliva*/   || 
+                HostName == "6G1SST3" /*Ruben Garcia */ || 
+                HostName == "CY7T2H4" /*La .50*/        ||
+                HostName == "D3JBB94" /*Eduardo Lopez*/
+                )
             {
                 cmdAdmin.Visible = true;
-                if (HostName == "7L12TV3")
+                switch (HostName)
                 {
-                    IdUser = 1035;
+                    case "7L12TV3":
+                    case "CY7T2H4":
+                        IdUser = 1035;
+                        break;
+                    case "6G1SST3":
+                        IdUser = 1186;
+                        break;
+                    case "D3JBB94":
+                        IdUser = 1186;
+                        break;
+                    default:
+
+                        break;
                 }
-                //else if (HostName == "9SSCBV2")
-                //{
-                //    IdUser = 1137;
-                //}
-                //else if (HostName == "6G1SST3")
-                //{
-                //    IdUser = 1058;
-                //}
-                //else
-                //{
-                //    IdUser = 1104;
-                //}
+               
             }
             else
             {
