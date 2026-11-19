@@ -158,7 +158,7 @@ namespace MIC
                         IdUser = 1035;
                         break;
                     case "6G1SST3":
-                        IdUser = 1186;
+                        IdUser = 1058;
                         break;
                     case "D3JBB94":
                         IdUser = 1186;
@@ -218,6 +218,40 @@ namespace MIC
             }
             //frmOpcionesMIC_BK frm = new frmOpcionesMIC_BK(Log1);
             //frm.MdiParent = this.MdiParent;
+
+            string HostName = Dns.GetHostName();
+            string DBActive = Globals.CONN_ActiveDB;
+            string IPAddress = "0.0.0.0";
+            var host = Dns.GetHostEntry(HostName);
+
+            foreach (var ip in host.AddressList)
+            {
+                if (ip.AddressFamily == System.Net.Sockets.AddressFamily.InterNetwork)
+                {
+                    IPAddress = ip.ToString();
+                }
+            }
+            try
+            {
+                //Guardar Log de Inicio de Sesion
+                DataOperations dp = new DataOperations();
+                SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC);
+                conn.Open();
+                SqlCommand cmd = new SqlCommand("sp_insert_login_user_mic", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@id_user", Log1.Id);
+                cmd.Parameters.AddWithValue("@pc_conexion", HostName);
+                cmd.Parameters.AddWithValue("@ip_conexion", IPAddress);
+                cmd.Parameters.AddWithValue("@database_conexion", DBActive);
+                cmd.Parameters.AddWithValue("@id_grupo", Log1.IdGrupo);
+                cmd.Parameters.AddWithValue("@version", AssemblyVersion);
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+
 
             frmContenedorPrincipal.LlamarEvento(Log1);
             this.Close();

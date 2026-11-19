@@ -24,7 +24,33 @@ namespace MIC.Equipos
         {
             InitializeComponent();
             UsuarioLogeado = pUser;
+            LoadTiposDevoluciones();
         }
+
+        private void LoadTiposDevoluciones()
+        {
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(dp.ConnectionStringMIC))
+                {
+                    conn.Open();
+                    using (SqlCommand cmd = new SqlCommand("sp_get_tipos_devolucion_list", conn))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        using (SqlDataAdapter adat = new SqlDataAdapter(cmd))
+                        {
+                            dsItems1.devolucion_tipos.Clear();
+                            adat.Fill(dsItems1.devolucion_tipos);
+                        }
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                CajaDialogo.Error(ex.Message);
+            }
+        }
+
         int codUser;
         private void simpleButton1_Click(object sender, EventArgs e)
         {
@@ -65,7 +91,7 @@ namespace MIC.Equipos
 
         private void cmdGuardar_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(comboMotivo.Text))
+            if (string.IsNullOrEmpty(gleTipoDevolucion.Text))
             {
                 CajaDialogo.Error("Debe Seleccionar un Motivo");
                 return;
@@ -77,23 +103,26 @@ namespace MIC.Equipos
                 return;
             }
 
-            if (MessageBox.Show("Desea finalizar la asignacion de estos equipos?", "Pregunta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+            if (MessageBox.Show("Desea finalizar la asignación de estos equipos?", "Pregunta", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
 
                 foreach (dsItems.itemsRow row in dsItems1.items.Rows)
                 {
                     if (row.seleccionado)
                     {
-                        try { 
-                        
-                            string Query = @"sp_update_mic_asignaciones_item";
+                        try {
+
+                            //string Query = @"sp_update_mic_asignaciones_item";
+                            string Query = @"[sp_update_mic_asignaciones_item_v2]";
                             SqlConnection cn = new SqlConnection(dp.ConnectionStringMIC);
                             cn.Open();
                             SqlCommand cmd = new SqlCommand(Query, cn);
                             cmd.CommandType = CommandType.StoredProcedure;
                             cmd.Parameters.AddWithValue("@id_item", row.id);
                             cmd.Parameters.AddWithValue("@id_user", codUser);
-                            cmd.Parameters.AddWithValue("@motivo", comboMotivo.Text);
+                            cmd.Parameters.AddWithValue("@motivo", gleTipoDevolucion.Text);
+                            cmd.Parameters.AddWithValue("@id_tipo", gleTipoDevolucion.EditValue);
+                            cmd.Parameters.AddWithValue("@id_user_it", UsuarioLogeado.Id);
                             cmd.ExecuteNonQuery();
                             try
                             {

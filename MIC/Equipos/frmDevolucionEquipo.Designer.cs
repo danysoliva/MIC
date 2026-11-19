@@ -29,12 +29,13 @@ namespace MIC.Equipos
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDevolucionEquipo));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.lblTituloVentana = new DevExpress.XtraEditors.LabelControl();
             this.txtUserName = new DevExpress.XtraEditors.TextEdit();
             this.label2 = new System.Windows.Forms.Label();
@@ -52,14 +53,20 @@ namespace MIC.Equipos
             this.repositoryItemCheckEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.cmdGuardar = new DevExpress.XtraEditors.SimpleButton();
             this.cmdCerrar = new DevExpress.XtraEditors.SimpleButton();
-            this.comboMotivo = new DevExpress.XtraEditors.ComboBoxEdit();
+            this.gleTipoDevolucion = new DevExpress.XtraEditors.GridLookUpEdit();
+            this.gridLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.bsTiposDevolucion = new System.Windows.Forms.BindingSource(this.components);
+            this.colid1 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.coldescripcion1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.txtUserName.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControlItems)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dsItems1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdv_data)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboMotivo.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gleTipoDevolucion.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTiposDevolucion)).BeginInit();
             this.SuspendLayout();
             // 
             // lblTituloVentana
@@ -90,7 +97,7 @@ namespace MIC.Equipos
             this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(12, 101);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.Size = new System.Drawing.Size(66, 16);
             this.label2.TabIndex = 34;
             this.label2.Text = "USUARIO";
             // 
@@ -110,7 +117,7 @@ namespace MIC.Equipos
             this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(383, 101);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(62, 16);
+            this.label1.Size = new System.Drawing.Size(61, 16);
             this.label1.TabIndex = 37;
             this.label1.Text = "MOTIVO";
             // 
@@ -212,9 +219,9 @@ namespace MIC.Equipos
             // btnEditar
             // 
             this.btnEditar.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnEditar.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
@@ -258,27 +265,55 @@ namespace MIC.Equipos
             this.cmdCerrar.Text = "Cerrar";
             this.cmdCerrar.Click += new System.EventHandler(this.cmdCerrar_Click);
             // 
-            // comboMotivo
+            // gleTipoDevolucion
             // 
-            this.comboMotivo.Location = new System.Drawing.Point(461, 100);
-            this.comboMotivo.Name = "comboMotivo";
-            this.comboMotivo.Properties.Appearance.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboMotivo.Properties.Appearance.Options.UseFont = true;
-            this.comboMotivo.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.gleTipoDevolucion.Location = new System.Drawing.Point(450, 97);
+            this.gleTipoDevolucion.Name = "gleTipoDevolucion";
+            this.gleTipoDevolucion.Properties.Appearance.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
+            this.gleTipoDevolucion.Properties.Appearance.Options.UseFont = true;
+            this.gleTipoDevolucion.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.comboMotivo.Properties.Items.AddRange(new object[] {
-            "FINALIZACION DE CONTRATO",
-            "RENOVACION DE EQUIPO",
-            "EQUIPO EN MAL ESTADO"});
-            this.comboMotivo.Size = new System.Drawing.Size(195, 22);
-            this.comboMotivo.TabIndex = 41;
+            this.gleTipoDevolucion.Properties.DataSource = this.bsTiposDevolucion;
+            this.gleTipoDevolucion.Properties.DisplayMember = "descripcion";
+            this.gleTipoDevolucion.Properties.NullText = "";
+            this.gleTipoDevolucion.Properties.PopupView = this.gridLookUpEdit1View;
+            this.gleTipoDevolucion.Properties.ValueMember = "id";
+            this.gleTipoDevolucion.Size = new System.Drawing.Size(210, 22);
+            this.gleTipoDevolucion.TabIndex = 41;
+            // 
+            // gridLookUpEdit1View
+            // 
+            this.gridLookUpEdit1View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colid1,
+            this.coldescripcion1});
+            this.gridLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridLookUpEdit1View.Name = "gridLookUpEdit1View";
+            this.gridLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // bsTiposDevolucion
+            // 
+            this.bsTiposDevolucion.DataMember = "devolucion_tipos";
+            this.bsTiposDevolucion.DataSource = this.dsItems1;
+            // 
+            // colid1
+            // 
+            this.colid1.FieldName = "id";
+            this.colid1.Name = "colid1";
+            // 
+            // coldescripcion1
+            // 
+            this.coldescripcion1.FieldName = "descripcion";
+            this.coldescripcion1.Name = "coldescripcion1";
+            this.coldescripcion1.Visible = true;
+            this.coldescripcion1.VisibleIndex = 0;
             // 
             // frmDevolucionEquipo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(668, 431);
-            this.Controls.Add(this.comboMotivo);
+            this.Controls.Add(this.gleTipoDevolucion);
             this.Controls.Add(this.cmdCerrar);
             this.Controls.Add(this.cmdGuardar);
             this.Controls.Add(this.gridControlItems);
@@ -295,7 +330,9 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.grdv_data)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnEditar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemCheckEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.comboMotivo.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gleTipoDevolucion.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bsTiposDevolucion)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -320,6 +357,10 @@ namespace MIC.Equipos
         private dsItems dsItems1;
         private DevExpress.XtraEditors.SimpleButton cmdGuardar;
         private DevExpress.XtraEditors.SimpleButton cmdCerrar;
-        private DevExpress.XtraEditors.ComboBoxEdit comboMotivo;
+        private DevExpress.XtraEditors.GridLookUpEdit gleTipoDevolucion;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridLookUpEdit1View;
+        private System.Windows.Forms.BindingSource bsTiposDevolucion;
+        private DevExpress.XtraGrid.Columns.GridColumn colid1;
+        private DevExpress.XtraGrid.Columns.GridColumn coldescripcion1;
     }
 }
