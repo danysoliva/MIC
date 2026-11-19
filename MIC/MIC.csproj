@@ -25,7 +25,7 @@
     <MapFileExtensions>true</MapFileExtensions>
     <InstallUrl>\\aqfsvr010\deploy%24\MIC\</InstallUrl>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>49</ApplicationRevision>
+    <ApplicationRevision>50</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
@@ -237,6 +237,12 @@
     <Compile Include="Equipos\frmListaDevolucionesHome.Designer.cs">
       <DependentUpon>frmListaDevolucionesHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Equipos\frmLogAsignacionesItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Equipos\frmLogAsignacionesItem.Designer.cs">
+      <DependentUpon>frmLogAsignacionesItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="Equipos\frmDevolucionEquipo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,11 +285,11 @@
     <Compile Include="Equipos\frmHomeDiagnosticos.Designer.cs">
       <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Equipos\frmHomeItems1.cs">
+    <Compile Include="Equipos\frmFindAtributos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Equipos\frmHomeItems1.Designer.cs">
-      <DependentUpon>frmHomeItems1.cs</DependentUpon>
+    <Compile Include="Equipos\frmFindAtributos.Designer.cs">
+      <DependentUpon>frmFindAtributos.cs</DependentUpon>
     </Compile>
     <Compile Include="Equipos\frmHomeTipoEquipo.cs">
       <SubType>Form</SubType>
@@ -426,6 +432,9 @@
     <EmbeddedResource Include="Equipos\frmListaDevolucionesHome.resx">
       <DependentUpon>frmListaDevolucionesHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Equipos\frmLogAsignacionesItem.resx">
+      <DependentUpon>frmLogAsignacionesItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Equipos\frmDevolverEquipo.resx">
       <DependentUpon>frmDevolverEquipo.cs</DependentUpon>
     </EmbeddedResource>
@@ -444,8 +453,8 @@
     <EmbeddedResource Include="Equipos\frmHomeDiagnosticos.resx">
       <DependentUpon>frmHomeDiagnosticos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Equipos\frmHomeItems1.resx">
-      <DependentUpon>frmHomeItems1.cs</DependentUpon>
+    <EmbeddedResource Include="Equipos\frmFindAtributos.resx">
+      <DependentUpon>frmFindAtributos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Equipos\frmHomeTipoEquipo.resx">
       <DependentUpon>frmHomeTipoEquipo.cs</DependentUpon>

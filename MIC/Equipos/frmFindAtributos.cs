@@ -342,6 +342,17 @@ namespace MIC.Equipos
             }
         }
 
+        private void cmdVerLog_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
+        {
+            var gridView = (GridView)gridControlHomeItems.FocusedView;
+            var row = (dsItems.itemsRow)gridView.GetFocusedDataRow();
+            if (row == null)
+                return;
+
+            frmLogAsignacionesItem frm = new frmLogAsignacionesItem(row.id, row.items_code, row.nombre);
+            frm.ShowDialog(this);
+        }
+
         private void cmdDiagnostico_ButtonClick(object sender, DevExpress.XtraEditors.Controls.ButtonPressedEventArgs e)
         {
             var gridView = (GridView)gridControlHomeItems.FocusedView;

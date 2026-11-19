@@ -91,6 +91,8 @@ namespace MIC.Equipos
             this.cmdUbicacion = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cmdDiagnostico = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.colVerLog = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cmdVerLog = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.repositoryItemFontEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemFontEdit();
             this.cmdSalir = new DevExpress.XtraEditors.SimpleButton();
             this.cmdNuevoItems = new DevExpress.XtraEditors.SimpleButton();
@@ -113,6 +115,7 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.cmdAdjuntarArchivos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdUbicacion)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDiagnostico)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdVerLog)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -162,7 +165,8 @@ namespace MIC.Equipos
             this.cmdDevolverEquipo,
             this.cmdAdjuntarArchivos,
             this.cmdUbicacion,
-            this.cmdDiagnostico});
+            this.cmdDiagnostico,
+            this.cmdVerLog});
             this.gridControlHomeItems.Size = new System.Drawing.Size(1121, 562);
             this.gridControlHomeItems.TabIndex = 27;
             this.gridControlHomeItems.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -214,7 +218,8 @@ namespace MIC.Equipos
             this.gridColumn4,
             this.gridColumn5,
             this.colubicacion,
-            this.gridColumn6});
+            this.gridColumn6,
+            this.colVerLog});
             this.gridView1.CustomizationFormBounds = new System.Drawing.Rectangle(934, 510, 259, 272);
             this.gridView1.GridControl = this.gridControlHomeItems;
             this.gridView1.Name = "gridView1";
@@ -447,6 +452,25 @@ namespace MIC.Equipos
             this.cmdDiagnostico.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.cmdDiagnostico.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdDiagnostico_ButtonClick);
             // 
+            // colVerLog
+            // 
+            this.colVerLog.Caption = "Ver Log";
+            this.colVerLog.ColumnEdit = this.cmdVerLog;
+            this.colVerLog.Name = "colVerLog";
+            this.colVerLog.ToolTip = "Ver log de asignaciones";
+            this.colVerLog.Visible = true;
+            this.colVerLog.VisibleIndex = 12;
+            this.colVerLog.Width = 80;
+            // 
+            // cmdVerLog
+            // 
+            this.cmdVerLog.AutoHeight = false;
+            this.cmdVerLog.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Search)});
+            this.cmdVerLog.Name = "cmdVerLog";
+            this.cmdVerLog.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.cmdVerLog.ButtonClick += new DevExpress.XtraEditors.Controls.ButtonPressedEventHandler(this.cmdVerLog_ButtonClick);
+            // 
             // repositoryItemFontEdit1
             // 
             this.repositoryItemFontEdit1.AutoHeight = false;
@@ -581,6 +605,7 @@ namespace MIC.Equipos
             ((System.ComponentModel.ISupportInitialize)(this.cmdAdjuntarArchivos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdUbicacion)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cmdDiagnostico)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmdVerLog)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemFontEdit1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -626,6 +651,8 @@ namespace MIC.Equipos
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit cmdUbicacion;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit cmdDiagnostico;
+        private DevExpress.XtraGrid.Columns.GridColumn colVerLog;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit cmdVerLog;
         private DevExpress.XtraEditors.SimpleButton btnAtributosEquipo;
         private DevExpress.XtraEditors.SimpleButton simpleButton3;
         private DevExpress.XtraEditors.SimpleButton cmdExcel;
